@@ -112,13 +112,36 @@ public class DB {
         return map;
     }
 
-    public static int getRowCount(String dbName) {
+    public static int count(String dbName) {
         Connection conn = getConn();
         PreparedStatement ps = null;
         ResultSet rs = null;
         int rowCount = 0;
         try {
             ps = conn.prepareStatement("select COUNT(*) as row_count from " + dbName);
+            rs = ps.executeQuery();
+            rs.next();
+            rowCount = rs.getInt(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            release(conn, ps, rs);
+        }
+        return rowCount;
+    }
+
+    public static int countBy(String sql, Object... params) {
+        Connection conn = getConn();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        int rowCount = 0;
+        try {
+            ps = conn.prepareStatement(sql);
+            if (params != null && params.length > 0) {
+                for (int i = 0; i < params.length; i++) {
+                    ps.setObject(i + 1, params[i]);
+                }
+            }
             rs = ps.executeQuery();
             rs.next();
             rowCount = rs.getInt(1);

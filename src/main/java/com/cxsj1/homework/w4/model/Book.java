@@ -23,6 +23,16 @@ public class Book {
         this.price = bookForm.price;
     }
 
+    public void set(Map<String, Object> item) {
+        this.isbn = (String) item.get("isbn");
+        this.title = (String) item.get("title");
+        this.author = (String) item.get("author");
+        this.publisher = (String) item.get("publisher");
+        this.intro = (String) item.get("intro");
+        this.cover = (String) item.get("cover");
+        this.price = (String) item.get("price");
+    }
+
     public String get(String isbn) {
         Map<String, Object> map = DB.queryOne("select * from books where isbn = ?", isbn);
         if (map == null) {
@@ -48,12 +58,16 @@ public class Book {
     }
 
     public boolean save() {
-        int affectedRows = DB.commit("update books set title = ?, author = ?, publisher = ?, intro = ?, cover = ?, price = ? where isbn = ?", this.title, this.author, this.publisher, this.intro, this.cover, this.price, this.isbn);
+        int affectedRows = DB.commit("update books set title = ?, author = ?, publisher = ?, intro = ?, cover = ?, " +
+                "price = ? where isbn = ?", this.title, this.author, this.publisher, this.intro, this.cover,
+                this.price, this.isbn);
         return affectedRows == 1;
     }
 
     public static boolean create(BookForm bookForm) {
-        int affectedRows = DB.commit("insert into books (isbn, title, author, publisher, intro, cover, price) values (?, ?, ?, ?, ?, ?, ?)", bookForm.isbn, bookForm.title, bookForm.author, bookForm.publisher, bookForm.intro, bookForm.cover, bookForm.price);
+        int affectedRows = DB.commit("insert into books (isbn, title, author, publisher, intro, cover, price) values " +
+                "(?, ?, ?, ?, ?, ?, ?)", bookForm.isbn, bookForm.title, bookForm.author, bookForm.publisher,
+                bookForm.intro, bookForm.cover, bookForm.price);
         return affectedRows == 1;
     }
 }

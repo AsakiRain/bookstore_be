@@ -9,45 +9,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="006fabec-5d07-42f0-b427-b17405e1fb69" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bookstore4_be_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/47951974-6142-427b-87e7-35902ed50199/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20221123-013001-3GBJFWB.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/Search.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookCRUD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Password.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/database/DB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Claim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/LoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/PasswordForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/RegisterForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/UserInfoForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/utils/Req.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/utils/Res.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/utils/Time.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/utils/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/HTMLUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+    <list default="true" id="006fabec-5d07-42f0-b427-b17405e1fb69" name="变更" comment="stage">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListEdit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/Config$DB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/Config$JWT.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/Config.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/Search.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookCRUD$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookCRUD$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookCRUD$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookCRUD.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookListPage$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookListPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookListSearch$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/BookListSearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/Login$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/Login.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/Password.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/Register.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/UserInfo$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/UserInfo$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/controller/UserInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/database/DB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/BookForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/BookList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/Claim.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/LoginForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/PasswordForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/RegisterForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/Response.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/model/UserInfoForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/utils/Req.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/utils/Res.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/utils/Time.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/utils/Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/database/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,30 +98,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/www/bin/tomcat10.1/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "工件",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.31755197",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/www/bin/tomcat10.1/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.31755197&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cxsj1.homework.w4.controller" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.0-M17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.0-M17" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/bookstore4" />
@@ -231,8 +242,20 @@
       <workItem from="1669189895579" duration="702000" />
       <workItem from="1669190615180" duration="2512000" />
       <workItem from="1669198998769" duration="5469000" />
-      <workItem from="1669228321669" duration="3825000" />
+      <workItem from="1669228321669" duration="4114000" />
+      <workItem from="1669256990835" duration="3548000" />
+      <workItem from="1669283011148" duration="1579000" />
+      <workItem from="1669286762898" duration="2547000" />
+      <workItem from="1669289348133" duration="1149000" />
     </task>
+    <task id="LOCAL-00001" summary="stage">
+      <created>1669233303043</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669233303043</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +274,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="stage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
