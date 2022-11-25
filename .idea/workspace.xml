@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="006fabec-5d07-42f0-b427-b17405e1fb69" name="变更" comment="stage">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="006fabec-5d07-42f0-b427-b17405e1fb69" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20221123-013001-3GBJFWB.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,31 +47,23 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectId" id="2Hnd7CIvk96CAM69CAGxygj1Mre" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
     "last_opened_file_path": "C:/www/bin/tomcat10.1/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.31755197",
@@ -81,16 +75,10 @@
     ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.cxsj1.homework.w4.controller" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.0-M17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.0-M17" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/bookstore4" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="bookstore4_be:war exploded">
@@ -192,29 +180,9 @@
       <workItem from="1668965741911" duration="2207000" />
       <workItem from="1669052674050" duration="3222000" />
       <workItem from="1669113335867" duration="281000" />
-      <workItem from="1669113651590" duration="5693000" />
-      <workItem from="1669125588512" duration="1686000" />
-      <workItem from="1669138264662" duration="4426000" />
-      <workItem from="1669162740177" duration="4930000" />
-      <workItem from="1669168050532" duration="785000" />
-      <workItem from="1669181681065" duration="2975000" />
-      <workItem from="1669189895579" duration="702000" />
-      <workItem from="1669190615180" duration="2512000" />
-      <workItem from="1669198998769" duration="5469000" />
-      <workItem from="1669228321669" duration="4114000" />
-      <workItem from="1669256990835" duration="3548000" />
-      <workItem from="1669283011148" duration="1579000" />
-      <workItem from="1669286762898" duration="2547000" />
-      <workItem from="1669289348133" duration="2252000" />
+      <workItem from="1669113651590" duration="5728000" />
+      <workItem from="1669359035221" duration="1771000" />
     </task>
-    <task id="LOCAL-00001" summary="stage">
-      <created>1669233303043</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1669233303043</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,10 +199,16 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="stage" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/database/DB.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
