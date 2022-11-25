@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006fabec-5d07-42f0-b427-b17405e1fb69" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.sync-conflict-20221123-013001-3GBJFWB.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/Search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/cxsj1/homework/w4/HTMLUtil.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d0fde8bd-bb31-428d-a37b-15becf3af6ac" />
+        <option name="url" value="https://github.com/AsakiRain/bookstore4_be.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -64,7 +71,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "工件",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.31755197",
     "settings.editor.selected.configurable": "preferences.sourceCode.Java"
@@ -181,8 +188,16 @@
       <workItem from="1669052674050" duration="3222000" />
       <workItem from="1669113335867" duration="281000" />
       <workItem from="1669113651590" duration="5728000" />
-      <workItem from="1669359035221" duration="1771000" />
+      <workItem from="1669359035221" duration="2238000" />
     </task>
+    <task id="LOCAL-00001" summary="修改了数据库字段，更新了数据库转储文件">
+      <created>1669361430550</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669361430550</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +213,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改了数据库字段，更新了数据库转储文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了数据库字段，更新了数据库转储文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
