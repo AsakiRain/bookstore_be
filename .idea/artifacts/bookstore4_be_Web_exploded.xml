@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="bookstore4_be:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/bookstore4_be_war_exploded</output-path>
+  <artifact type="exploded-war" name="bookstore4_be:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/bookstore4_be_Web_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="bookstore4_be/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -9,12 +9,12 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.alibaba.fastjson2:fastjson2:2.0.19" />
-          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.30" />
           <element id="library" level="project" name="Maven: com.auth0:java-jwt:4.2.1" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.4" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.4" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.4.2" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.30" />
         </element>
       </element>
     </root>
