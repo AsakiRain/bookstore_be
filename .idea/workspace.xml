@@ -11,7 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="945f181a-c764-409f-ab99-9beda7338e8c" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/database/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +251,7 @@
       <workItem from="1669447032677" duration="2384000" />
       <workItem from="1669450390788" duration="1924000" />
       <workItem from="1669524284397" duration="573000" />
-      <workItem from="1669527382586" duration="933000" />
+      <workItem from="1669527382586" duration="2251000" />
     </task>
     <task id="LOCAL-00001" summary="添加了配置教程">
       <created>1669449372553</created>
@@ -271,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669524559929</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="更新readme">
+      <created>1669528610555</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669528610555</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +302,7 @@
     <MESSAGE value="添加了配置教程" />
     <MESSAGE value="添加了apifox的使用教程" />
     <MESSAGE value="添加了war程序打包配置，修复了登录和图书获取api的map判断逻辑错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了war程序打包配置，修复了登录和图书获取api的map判断逻辑错误" />
+    <MESSAGE value="更新readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新readme" />
   </component>
 </project>

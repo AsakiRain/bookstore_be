@@ -43,13 +43,7 @@ public class UserInfo extends HttpServlet {
 
         Map<String, Object> data = new HashMap<>() {
             {
-                put("user_info", new HashMap<String, String>() {
-                    {
-                        put("username", user.username);
-                        put("nickname", user.nickname);
-                        put("sex", user.sex);
-                    }
-                });
+                put("user_info", user);
             }
         };
 

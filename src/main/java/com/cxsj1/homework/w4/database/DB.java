@@ -52,11 +52,11 @@ public class DB {
         return affectedRows;
     }
 
-    public static List<Map<String, Object>> queryAll(String sql, Object... params) {
+    public static List<HashMap<String, Object>> queryAll(String sql, Object... params) {
         Connection conn = getConn();
         PreparedStatement ps = null;
         ResultSet rs = null;
-        List<Map<String, Object>> list = new ArrayList<>();
+        List<HashMap<String, Object>> list = new ArrayList<>();
         try {
             ps = conn.prepareStatement(sql);
             if (params != null && params.length > 0) {
@@ -68,7 +68,7 @@ public class DB {
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnCount = rsmd.getColumnCount();
             while (rs.next()) {
-                Map<String, Object> map = new HashMap<>();
+                HashMap<String, Object> map = new HashMap<>();
                 for (int i = 1; i <= columnCount; i++) {
                     map.put(rsmd.getColumnName(i), rs.getObject(i));
                 }
@@ -82,11 +82,11 @@ public class DB {
         return list;
     }
 
-    public static Map<String, Object> queryOne(String sql, Object... params) {
+    public static HashMap<String, Object> queryOne(String sql, Object... params) {
         Connection conn = getConn();
         PreparedStatement ps = null;
         ResultSet rs = null;
-        Map<String, Object> map = null;
+        HashMap<String, Object> map = null;
         try {
             ps = conn.prepareStatement(sql);
             if (params != null && params.length > 0) {

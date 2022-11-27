@@ -2,6 +2,8 @@ package com.cxsj1.homework.w4.model;
 
 import com.cxsj1.homework.w4.database.DB;
 
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 public class User {
@@ -9,12 +11,15 @@ public class User {
     public String nickname;
     public String sex;
     public String password;
+    public Long created_at;
+    public Long updated_at;
 
-    public void set(String username, String nickname, String sex, String password) {
-        this.nickname = nickname;
-        this.username = username;
-        this.sex = sex;
-        this.password = password;
+    public void set(HashMap<String, Object> data) {
+        this.username = (String) data.get("username");
+        this.nickname = (String) data.get("nickname");
+        this.sex = (String) data.get("sex");
+        this.created_at = ((Date) data.get("created_at")).getTime();
+        this.updated_at = ((Date) data.get("updated_at")).getTime();
     }
 
     public static boolean hasUser(String username) {
@@ -22,21 +27,23 @@ public class User {
     }
 
     public static String get(String username, User user) {
-        Map<String, Object> map = DB.queryOne("select * from users where username = ?", username);
+        HashMap<String, Object> map = DB.queryOne("select * from users where username = ?", username);
         if (map.size() == 0) {
             return "用户不存在";
         }
-        user.set((String) map.get("username"), (String) map.get("nickname"), (String) map.get("sex"), (String) map.get("password"));
+        user.set(map);
         return null;
     }
 
     public boolean save() {
-        int affectedRows = DB.commit("update users set nickname = ?, sex = ?, password = ? where username = ?", this.nickname, this.sex, this.password, this.username);
+        int affectedRows = DB.commit("update users set nickname = ?, sex = ?, password = ? where username = ?",
+                this.nickname, this.sex, this.password, this.username);
         return affectedRows == 1;
     }
 
     public static boolean create(String username, String nickname, String password, String sex) {
-        int affectedRows = DB.commit("insert into users (username, nickname, password, sex) values (?, ?, ?, ?)", username, nickname, password, sex);
+        int affectedRows = DB.commit("insert into users (username, nickname, password, sex) values (?, ?, ?, ?)",
+                username, nickname, password, sex);
         return affectedRows == 1;
     }
 
