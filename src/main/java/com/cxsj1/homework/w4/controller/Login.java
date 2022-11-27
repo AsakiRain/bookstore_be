@@ -18,12 +18,8 @@ import java.util.HashMap;
 @WebServlet("/api/login")
 public class Login extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.Error(res, 400, 40001, "不能使用GET请求");
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        Res.CORS(res);
         String err;
         LoginForm loginForm = JSON.parseObject(req.getInputStream().readAllBytes(), LoginForm.class);
         if (loginForm == null) {

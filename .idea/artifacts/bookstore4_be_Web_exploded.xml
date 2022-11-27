@@ -6,6 +6,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="bookstore4_be" />
+          <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar" path-in-jar="/" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.alibaba.fastjson2:fastjson2:2.0.19" />
@@ -15,6 +16,13 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.4.2" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.30" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:4.10.0" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio-jvm:3.0.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.6.20" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:13.0" />
         </element>
       </element>
     </root>

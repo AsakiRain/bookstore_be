@@ -21,6 +21,7 @@ import java.util.Map;
 public class Password extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {

@@ -24,6 +24,7 @@ public class Register extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        Res.CORS(res);
         String err;
         RegisterForm registerForm = JSON.parseObject(req.getInputStream().readAllBytes(), RegisterForm.class);
         if (registerForm == null) {

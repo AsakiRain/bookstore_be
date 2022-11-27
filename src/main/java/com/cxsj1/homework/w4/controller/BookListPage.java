@@ -1,10 +1,7 @@
 package com.cxsj1.homework.w4.controller;
-import com.alibaba.fastjson2.JSON;
-import com.cxsj1.homework.w4.model.Book;
-import com.cxsj1.homework.w4.model.BookForm;
+
 import com.cxsj1.homework.w4.model.BookList;
 import com.cxsj1.homework.w4.model.Claim;
-import com.cxsj1.homework.w4.utils.Req;
 import com.cxsj1.homework.w4.utils.Res;
 import com.cxsj1.homework.w4.utils.Token;
 import jakarta.servlet.annotation.WebServlet;
@@ -19,6 +16,7 @@ import java.util.HashMap;
 public class BookListPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {
@@ -39,18 +37,18 @@ public class BookListPage extends HttpServlet {
         }
 
         int page;
-        try{
+        try {
             page = Integer.parseInt(req.getParameter("page"));
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             Res.Error(res, 422, 42202, e.getMessage());
             return;
         }
 
         BookList bookList = new BookList(claim.username);
-        HashMap<String,Object> data = new HashMap<>() {
+        HashMap<String, Object> data = new HashMap<>() {
             {
                 put("book_list", bookList.list(page));
+                put("book_count", bookList.count);
             }
         };
 
