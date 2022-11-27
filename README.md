@@ -4,11 +4,20 @@
 
 因为前后端分离，后端只用`servlet`没有`jsp`。使用了`fastjson`和`auth0-jwt`
 
+## 技术栈
+- Java 17.0.5 64-Bit
+- Tomcat 10.1.2
+- MySQL 5.7.35-log
+- com.alibaba.fastjson2:fastjson2 2.0.19
+- com.auth0:java-jwt3 4.2.1
+- mysql:mysql-connector-java 8.0.30
+
 ## 项目结构
 
 - `controller` 中是响应请求的处理逻辑
 - `model` 中是用到的数据结构和对象相关的方法
 - `utils` 中是一些工具类，封装了一套返回数据结构
+- `database` 中封装了基础的数据库操作
 
 ## 项目接口
 
