@@ -2,7 +2,6 @@ package com.cxsj1.homework.w4.controller;
 
 import com.cxsj1.homework.w4.utils.Req;
 import com.cxsj1.homework.w4.utils.Res;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,7 +15,7 @@ import okhttp3.*;
 @WebServlet("/api/proxy")
 public class URLProxy extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         Res.CORS(res);
         String url = req.getParameter("url");
         if (Req.hasEmpty(url)) {
@@ -35,6 +34,8 @@ public class URLProxy extends HttpServlet {
                 res.setHeader("Set-Cookie", setCookie);
             }
             Objects.requireNonNull(response.body()).byteStream().transferTo(res.getOutputStream());
+        } catch (Exception e) {
+            Res.Error(res, 500, 50099, e.getMessage());
         }
     }
 }
