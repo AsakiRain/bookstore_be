@@ -69,7 +69,7 @@ public class Book {
 
     public String get(String isbn) {
         Map<String, Object> map = DB.queryOne("select * from books where isbn = ?", isbn);
-        if (map == null) {
+        if (map.size() == 0) {
             return "图书不存在";
         }
         this.set(map);

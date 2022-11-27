@@ -31,9 +31,7 @@
 4. 找到项目根目录下面的bookstore.sql文件夹，运行```source D:\code\bookstore4_be\bookstore.sql```导入数据库
    > 注意，这里的路径要是你的项目实际路径
 5. （可跳过）运行```CREATE USER `crud`@`%` IDENTIFIED WITH mysql_native_password BY 'ssr129631';```创建用户
-6.
-
-（可跳过）运行```GRANT Alter, Alter Routine, Create, Create Routine, Create Temporary Tables, Create View, Delete, Drop, Event, Execute, Grant Option, Index, Insert, Lock Tables, References, Select, Show View, Trigger, Update ON `bookstore`.* TO `crud`@`%`;```
+6. （可跳过）运行```GRANT Alter, Alter Routine, Create, Create Routine, Create Temporary Tables, Create View, Delete, Drop, Event, Execute, Grant Option, Index, Insert, Lock Tables, References, Select, Show View, Trigger, Update ON `bookstore`.* TO `crud`@`%`;```
 为他授予数据库权限
 
 7. 去src/Config.java修改一下你的数据库配置，比如多数人的端口是3306，和我的默认配置不一样。如果你跳过了上面两步，可以把账号密码设置成root用户直接连接。

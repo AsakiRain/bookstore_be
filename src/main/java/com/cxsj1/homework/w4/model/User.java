@@ -23,7 +23,7 @@ public class User {
 
     public static String get(String username, User user) {
         Map<String, Object> map = DB.queryOne("select * from users where username = ?", username);
-        if (map == null) {
+        if (map.size() == 0) {
             return "用户不存在";
         }
         user.set((String) map.get("username"), (String) map.get("nickname"), (String) map.get("sex"), (String) map.get("password"));
