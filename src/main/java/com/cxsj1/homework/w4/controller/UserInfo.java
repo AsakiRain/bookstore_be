@@ -49,6 +49,7 @@ public class UserInfo extends HttpServlet {
 
         Res.Json(res, 20000, "获取成功", data);
     }
+
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String err;
@@ -80,15 +81,15 @@ public class UserInfo extends HttpServlet {
 
         String nickname = userInfoForm.nickname;
         String sex = userInfoForm.sex;
-        if(Req.hasEmpty(nickname,sex)){
+        if (Req.hasEmpty(nickname, sex)) {
             Res.Error(res, 400, 40002, "参数不足或有误");
             return;
         }
 
         user.nickname = nickname;
         user.sex = sex;
-        if(!user.save()){
-            Res.Json(res, 50001,  "更新信息失败");
+        if (!user.save()) {
+            Res.Json(res, 50001, "更新信息失败");
             return;
         }
 

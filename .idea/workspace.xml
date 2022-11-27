@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="945f181a-c764-409f-ab99-9beda7338e8c" name="变更" comment="">
+    <list default="true" id="945f181a-c764-409f-ab99-9beda7338e8c" name="变更" comment="修复User类的逻辑错误，将密码设置成不可序列化字段">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +249,7 @@
       <workItem from="1669447032677" duration="2384000" />
       <workItem from="1669450390788" duration="1924000" />
       <workItem from="1669524284397" duration="573000" />
-      <workItem from="1669527382586" duration="3520000" />
+      <workItem from="1669527382586" duration="4394000" />
     </task>
     <task id="LOCAL-00001" summary="添加了配置教程">
       <created>1669449372553</created>
@@ -285,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669534656859</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="注册成功时将会直接返回token">
+      <created>1669535930057</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669535930057</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +316,8 @@
     <MESSAGE value="添加了war程序打包配置，修复了登录和图书获取api的map判断逻辑错误" />
     <MESSAGE value="更新readme" />
     <MESSAGE value="修改数据库返回的抽象类型Map为HashMap，更改波及User类和Book类&#10;userinfo接口现在会返回created_at和updated_at字段" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改数据库返回的抽象类型Map为HashMap，更改波及User类和Book类&#10;userinfo接口现在会返回created_at和updated_at字段" />
+    <MESSAGE value="注册成功时将会直接返回token" />
+    <MESSAGE value="修复User类的逻辑错误，将密码设置成不可序列化字段" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复User类的逻辑错误，将密码设置成不可序列化字段" />
   </component>
 </project>

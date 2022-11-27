@@ -4,19 +4,19 @@ import com.cxsj1.homework.w4.database.DB;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
 
 public class User {
     public String username;
     public String nickname;
     public String sex;
-    public String password;
+    public transient String password;
     public Long created_at;
     public Long updated_at;
 
     public void set(HashMap<String, Object> data) {
         this.username = (String) data.get("username");
         this.nickname = (String) data.get("nickname");
+        this.password = (String) data.get("password");
         this.sex = (String) data.get("sex");
         this.created_at = ((Date) data.get("created_at")).getTime();
         this.updated_at = ((Date) data.get("updated_at")).getTime();
