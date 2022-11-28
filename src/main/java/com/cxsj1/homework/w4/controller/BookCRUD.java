@@ -21,18 +21,6 @@ public class BookCRUD extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         Res.CORS(res);
         String err;
-        String token = req.getHeader("Authorization");
-        if (token == null) {
-            Res.Error(res, 401, 40101, "未登录");
-            return;
-        }
-
-        Claim claim = new Claim();
-        err = Token.parse(token, claim);
-        if (err != null) {
-            Res.Error(res, 401, 40102, err);
-            return;
-        }
 
         String isbn = req.getParameter("isbn");
         if (isbn == null) {
