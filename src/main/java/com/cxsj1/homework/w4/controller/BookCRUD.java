@@ -69,6 +69,11 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
+        if (Book.hasBook(bookForm.isbn)) {
+            Res.Json(res, 42202, "图书已存在");
+            return;
+        }
+
         if (!Book.create(bookForm)) {
             Res.Json(res, 42205, "创建图书失败");
             return;

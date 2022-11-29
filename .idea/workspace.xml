@@ -9,20 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="查询图书详情不再需要登录，为了作业5做准备">
-      <change afterPath="$PROJECT_DIR$/sanCheck.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Index.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/filter/CORS.java" afterDir="false" />
+    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListEdit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Password.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/URLProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/URLProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/UserInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +87,7 @@
       <workItem from="1669643677946" duration="1454000" />
       <workItem from="1669645417120" duration="2547000" />
       <workItem from="1669696414897" duration="623000" />
-      <workItem from="1669721622013" duration="2143000" />
+      <workItem from="1669721622013" duration="3877000" />
     </task>
     <task id="LOCAL-00001" summary="查询图书详情不再需要登录，为了作业5做准备">
       <created>1669636365461</created>
@@ -107,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669636365462</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null">
+      <created>1669723864856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669723864856</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="查询图书详情不再需要登录，为了作业5做准备" />
-    <option name="LAST_COMMIT_MESSAGE" value="查询图书详情不再需要登录，为了作业5做准备" />
+    <MESSAGE value="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null" />
+    <option name="LAST_COMMIT_MESSAGE" value="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null" />
   </component>
 </project>
