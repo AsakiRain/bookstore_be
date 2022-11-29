@@ -1,4 +1,6 @@
 package com.cxsj1.homework.w4.controller;
+
+import com.cxsj1.homework.w4.model.Book;
 import com.cxsj1.homework.w4.model.BookList;
 import com.cxsj1.homework.w4.model.Claim;
 import com.cxsj1.homework.w4.utils.Res;
@@ -9,6 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @WebServlet("/api/booklist/search")
@@ -36,9 +39,11 @@ public class BookListSearch extends HttpServlet {
         }
 
         BookList bookList = new BookList(claim.username);
-        HashMap<String,Object> data = new HashMap<>() {
+        ArrayList<Book> search_result = bookList.search(keyword);
+        HashMap<String, Object> data = new HashMap<>() {
             {
-                put("search_result", bookList.search(keyword));
+                put("search_result", search_result);
+                put("search_count", search_result.size());
             }
         };
 
