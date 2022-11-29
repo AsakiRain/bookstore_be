@@ -20,7 +20,6 @@ import java.util.Map;
 public class UserInfo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {
@@ -53,7 +52,6 @@ public class UserInfo extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {

@@ -19,7 +19,6 @@ import java.util.HashMap;
 public class BookCRUD extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
 
         String isbn = req.getParameter("isbn");
@@ -45,7 +44,6 @@ public class BookCRUD extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {
@@ -86,7 +84,6 @@ public class BookCRUD extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {
@@ -135,7 +132,6 @@ public class BookCRUD extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {

@@ -15,7 +15,6 @@ import java.util.HashMap;
 public class BookListSearch extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {

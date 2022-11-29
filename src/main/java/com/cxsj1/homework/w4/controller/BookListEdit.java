@@ -16,7 +16,6 @@ import java.util.HashMap;
 public class BookListEdit extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {
@@ -48,7 +47,6 @@ public class BookListEdit extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         String token = req.getHeader("Authorization");
         if (token == null) {

@@ -19,7 +19,6 @@ import java.util.HashMap;
 public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String err;
         LoginForm loginForm = JSON.parseObject(req.getInputStream().readAllBytes(), LoginForm.class);
         if (loginForm == null) {

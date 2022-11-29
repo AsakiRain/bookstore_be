@@ -16,7 +16,6 @@ import okhttp3.*;
 public class URLProxy extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        Res.CORS(res);
         String url = req.getParameter("url");
         if (Req.hasEmpty(url)) {
             Res.Error(res, 422, 42299, "缺少参数");
