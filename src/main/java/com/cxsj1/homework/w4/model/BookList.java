@@ -14,7 +14,8 @@ public class BookList {
     }
 
     public ArrayList<Book> list(int page) {
-        List<HashMap<String, Object>> list = DB.queryAll(("SELECT b.* FROM lists AS l INNER JOIN books b ON l.isbn = b" +
+        List<HashMap<String, Object>> list = DB.queryAll(("SELECT b.* FROM lists AS l INNER JOIN books b ON l.isbn = " +
+                "b" +
                 ".isbn" +
                 " WHERE username = ? LIMIT ").concat(String.valueOf((page - 1) * 20)).concat(", 20"), this.username);
 
@@ -28,9 +29,9 @@ public class BookList {
     }
 
     public ArrayList<Book> search(String keyword) {
-        List<HashMap<String, Object>> list = DB.queryAll(("SELECT b.* FROM lists AS l INNER JOIN books b ON l.isbn = b" +
-                ".isbn" +
-                " WHERE username = ? AND b.title LIKE ?"), this.username, "%" + keyword + "%");
+        List<HashMap<String, Object>> list = DB.queryAll(("SELECT b.* FROM lists AS l INNER JOIN books b ON l.isbn = " +
+                "b.isbn WHERE username = ? AND (b.title LIKE ? OR b.intro LIKE ?)"), this.username, "%" + keyword +
+                "%", "%" + keyword + "%");
 
         ArrayList<Book> books = new ArrayList<>();
         for (HashMap<String, Object> item : list) {

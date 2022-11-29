@@ -10,8 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/model/BookList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1669643677946" duration="1454000" />
       <workItem from="1669645417120" duration="2547000" />
       <workItem from="1669696414897" duration="623000" />
-      <workItem from="1669721622013" duration="3877000" />
+      <workItem from="1669721622013" duration="4101000" />
     </task>
     <task id="LOCAL-00001" summary="查询图书详情不再需要登录，为了作业5做准备">
       <created>1669636365461</created>
@@ -103,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669723864856</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="创建已经存在的书时会失败了">
+      <created>1669727587051</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669727587051</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +129,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="查询图书详情不再需要登录，为了作业5做准备" />
     <MESSAGE value="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null" />
-    <option name="LAST_COMMIT_MESSAGE" value="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null" />
+    <MESSAGE value="创建已经存在的书时会失败了" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建已经存在的书时会失败了" />
   </component>
 </project>
