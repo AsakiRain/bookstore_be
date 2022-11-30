@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="">
+    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="搜索会返回结果数">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/BookListSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,8 @@
       <workItem from="1669643677946" duration="1454000" />
       <workItem from="1669645417120" duration="2547000" />
       <workItem from="1669696414897" duration="623000" />
-      <workItem from="1669721622013" duration="4980000" />
+      <workItem from="1669721622013" duration="7586000" />
+      <workItem from="1669767261817" duration="478000" />
     </task>
     <task id="LOCAL-00001" summary="查询图书详情不再需要登录，为了作业5做准备">
       <created>1669636365461</created>
@@ -117,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669727903477</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="搜索会返回结果数">
+      <created>1669730478874</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669730478874</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +147,7 @@
     <MESSAGE value="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null" />
     <MESSAGE value="创建已经存在的书时会失败了" />
     <MESSAGE value="书单搜索现在会搜索简介了" />
-    <option name="LAST_COMMIT_MESSAGE" value="书单搜索现在会搜索简介了" />
+    <MESSAGE value="搜索会返回结果数" />
+    <option name="LAST_COMMIT_MESSAGE" value="搜索会返回结果数" />
   </component>
 </project>
