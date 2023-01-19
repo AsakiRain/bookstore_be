@@ -5,6 +5,7 @@
 因为前后端分离，后端只用`servlet`没有`jsp`。使用了`fastjson`和`auth0-jwt`
 
 ## 技术栈
+
 - Java 17.0.5 64-Bit
 - Tomcat 10.1.2
 - MySQL 5.7.35-log
@@ -31,6 +32,23 @@
 - 如果`jwt token`验证失败会返回401，此时需要重新登录获取新的`token`
 - 如果有500，我是没有遇到过，建议`debug`完叫我一下
 - 推荐前端使用`fetch`函数进行`ajax`请求。
+
+| 请求方式   | 接口                                 | 说明       |
+|--------|------------------------------------|----------|
+| POST   | /login                             | 登录       |
+| POST   | /register                          | 注册       |
+| GET    | /user/info                         | 获取用户信息   |
+| PUT    | /user/info                         | 修改用户信息   |
+| PUT    | /user/password                     | 修改密码     |
+| GET    | /book?isbn={isbn}                  | 获取书籍详细信息 |
+| DELETE | /book?isbn={isbn}                  | 删除书籍     |
+| PUT    | /book                              | 修改书籍信息   |
+| POST   | /book                              | 添加书籍     |
+| GET    | /booklist/page?page={page}         | 获取书籍列表   |
+| GET    | /booklist/search?keyword={keyword} | 搜索书籍     |
+| PUT    | /booklist?isbn={isbn}              | 添加到书单    |
+| DELETE | /booklist?isbn={isbn}              | 从书单中删除   |
+
 ## 数据库配置
 
 1. 打开一个`MySQL Command Line`客户端，输入用户名密码
@@ -40,10 +58,12 @@
 4. 找到项目根目录下面的`bookstore.sql`文件夹，运行```source D:\code\bookstore4_be\bookstore.sql```导入数据库
    > 注意，这里的路径要是你的项目实际路径
 5. （可跳过）运行```CREATE USER `crud`@`%` IDENTIFIED WITH mysql_native_password BY 'ssr129631';```创建用户
-6. （可跳过）运行```GRANT Alter, Alter Routine, Create, Create Routine, Create Temporary Tables, Create View, Delete, Drop, Event, Execute, Grant Option, Index, Insert, Lock Tables, References, Select, Show View, Trigger, Update ON `bookstore`.* TO `crud`@`%`;```
+6.
+（可跳过）运行```GRANT Alter, Alter Routine, Create, Create Routine, Create Temporary Tables, Create View, Delete, Drop, Event, Execute, Grant Option, Index, Insert, Lock Tables, References, Select, Show View, Trigger, Update ON `bookstore`.* TO `crud`@`%`;```
 为他授予数据库权限
 
-7. 去`src/Config.java`修改一下你的数据库配置，比如多数人的端口是`3306`，和我的默认配置不一样。如果你跳过了上面两步，可以把账号密码设置成`root`用户直接连接。
+7. 去`src/Config.java`修改一下你的数据库配置，比如多数人的端口是`3306`
+   ，和我的默认配置不一样。如果你跳过了上面两步，可以把账号密码设置成`root`用户直接连接。
    ![配置](./md/config.png)
 8. 已经结束了，大的还在后头
 
@@ -77,29 +97,31 @@
     ![设置上下文](./md/context.png)
 15. 运行，如果弹出浏览器访问显示404是正常的，因为/并没有对应的`servlet`
     ![404](./md/404.png)
-16. 相关请求`api`都在`apifox`里面，请求路径以[http://127.0.0.1:8080/bookstore4_be/api/](http://127.0.0.1:8080/bookstore4_be/api/)
-开头,如[http://127.0.0.1:8080/bookstore4/api/login](http://127.0.0.1:8080/bookstore4/api/login)
-，[http://127.0.0.1:8080/bookstore4/api/booklist/page?page=1](http://127.0.0.1:8080/bookstore4/api/booklist/page?page=1)
+16. 相关请求`api`都在`apifox`
+    里面，请求路径以[http://127.0.0.1:8080/bookstore4_be/api/](http://127.0.0.1:8080/bookstore4_be/api/)
+    开头,如[http://127.0.0.1:8080/bookstore4/api/login](http://127.0.0.1:8080/bookstore4/api/login)
+    ，[http://127.0.0.1:8080/bookstore4/api/booklist/page?page=1](http://127.0.0.1:8080/bookstore4/api/booklist/page?page=1)
 
 ## 使用APIFOX进行测试
+
 1. 访问[https://www.apifox.cn/](https://www.apifox.cn/)，注册一个账号，下载客户端
 2. 访问项目地址[https://www.apifox.cn/web/project/1958328](https://www.apifox.cn/web/project/1958328)，点击项目设置并登录
 3. 登陆后来到项目操作，选择克隆项目
-![克隆项目](./md/clone.png)
+   ![克隆项目](./md/clone.png)
 4. 选择你自己的团队（比如示例团队），然后确认
-![选择团队](./md/team.png)
+   ![选择团队](./md/team.png)
 5. 打开的桌面客户端，你应该能找到克隆过来的项目，如果没有，点一下软件右上角的刷新
-![刷新按钮](./md/refresh.png)
+   ![刷新按钮](./md/refresh.png)
 6. 你可以随时点击左上角的项目名称来切换团队和项目
-![切换项目](./md/switch.png)
+   ![切换项目](./md/switch.png)
 7. 左侧接口列表显示了所有的接口，可以点击三角形展开接口分组和数据模型
-![项目概览](./md/overview.png)
+   ![项目概览](./md/overview.png)
 8. 先配置一个测试环境，点击右上角的云端`MOCK`下拉菜单，展开环境配置，选择测试环境
-![选择环境](./md/env.png)
-    > 如果你的`tomcat`不在8080端口，或者你在idea中配置的请求上下文路径和教程不一样，就需要进入管理环境按照实际情况填写
+   ![选择环境](./md/env.png)
+   > 如果你的`tomcat`不在8080端口，或者你在idea中配置的请求上下文路径和教程不一样，就需要进入管理环境按照实际情况填写
 9. 现在打开后端服务器，点击登录接口左侧的三角并选择成功用例
-![选择用例](./md/demo.png)
-可以看到成功用例自动填入了`body`请求体，请求链接等
+   ![选择用例](./md/demo.png)
+   可以看到成功用例自动填入了`body`请求体，请求链接等
 10. 点击发送，查看返回值是否符合预期
-![请求成功](./md/success.png)
+    ![请求成功](./md/success.png)
 11. 此外，你可以切换到各个接口来查看接口文档，或者修改文档

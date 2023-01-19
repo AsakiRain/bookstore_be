@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="更新转储数据库">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bookstore4_be_Web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore4_be_Web.war" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore4_be_Web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Index.java" afterDir="false" />
+    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
