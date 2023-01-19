@@ -33,21 +33,33 @@
 - 如果有500，我是没有遇到过，建议`debug`完叫我一下
 - 推荐前端使用`fetch`函数进行`ajax`请求。
 
-| 请求方式   | 接口                                 | 说明       |
-|--------|------------------------------------|----------|
-| POST   | /login                             | 登录       |
-| POST   | /register                          | 注册       |
-| GET    | /user/info                         | 获取用户信息   |
-| PUT    | /user/info                         | 修改用户信息   |
-| PUT    | /user/password                     | 修改密码     |
-| GET    | /book?isbn={isbn}                  | 获取书籍详细信息 |
-| DELETE | /book?isbn={isbn}                  | 删除书籍     |
-| PUT    | /book                              | 修改书籍信息   |
-| POST   | /book                              | 添加书籍     |
-| GET    | /booklist/page?page={page}         | 获取书籍列表   |
-| GET    | /booklist/search?keyword={keyword} | 搜索书籍     |
-| PUT    | /booklist?isbn={isbn}              | 添加到书单    |
-| DELETE | /booklist?isbn={isbn}              | 从书单中删除   |
+| 请求方式   | 接口                                     | 说明         | 状态                         |
+|--------|----------------------------------------|------------|----------------------------|
+| POST   | /register                              | 注册         | 🤯待修改：需要发放虚拟币              |
+| POST   | /login                                 | 登录         | ✅                          |
+| GET    | /user/info                             | 获取用户信息     | ✅                          |
+| PUT    | /user/info                             | 修改用户信息     | ✅                          |
+| PUT    | /user/password                         | 修改密码       | ✅                          |
+| GET    | /book?isbn={isbn}                      | 获取书籍详细信息   | 🤯待修改：需要增加图书是否下架的字段和库存数量字段 |
+| GET    | ~~/booklist/page?page={page}~~         | ~~获取书籍列表~~ | ❌被废弃👇                     |
+| GET    | /store/page?page={page}                | 获取书籍列表     | 🤯待修改：浏览全部图书不需要登录          |
+| GET    | ~~/booklist/search?keyword={keyword}~~ | ~~搜索书籍~~   | ❌被废弃👇                     |
+| GET    | /store/search?keyword={keyword}        | 搜索书籍       | 🤯待修改：下架的图书不能被搜出来          |
+| PUT    | ~~/booklist?isbn={isbn}~~              | ~~添加到书单~~  | ❌被废弃：用户购物车现在是前端缓存          |
+| DELETE | ~~/booklist?isbn={isbn}~~              | ~~从书单中删除~~ | ❌被废弃：用户购物车现在是前端缓存          |
+| GET    | /order/list?page={page}                | 获取订单列表     | 🤡未做                       |
+| POST   | /order/purchase?isbn={isbn}            | 购买书籍       | 🤡未做                       |
+| GET    | /order?serial={serial}                 | 查看订单状态     | 🤡未做                       |
+| DELETE | ~~/book?isbn={isbn}~~                  | ~~删除书籍~~   | ❌被废弃👇                     |
+| DELETE | /manage/book?isbn={isbn}               | 删除书籍       | 🤯待修改：只有店员可以删除图书           |
+| PUT    | ~~/book~~                              | ~~修改书籍信息~~ | ❌被废弃👇                     |
+| PUT    | /manage/book                           | 修改书籍信息     | 🤯待修改：只有店员可以修改信息、上架、下架图书   |
+| POST   | ~~/book~~                              | ~~添加书籍~~   | ❌被废弃👇                     |
+| POST   | /manage/book                           | 添加书籍       | 🤯待修改：只有店员可以添加图书           |
+| GET    | /manage/order/list?page={page}         | 店员获取订单列表   | 🤡未做                       |
+| GET    | /manage/order/process                  | 店员获取订单状态   | 🤡未做                       |
+| POST   | /manage/order/process                  | 店员审核和发货    | 🤡未做                       |
+| GET    | /manage/statistics                     | 店长获取统计信息   | 🤡未做                       |
 
 ## 数据库配置
 
@@ -59,6 +71,7 @@
    > 注意，这里的路径要是你的项目实际路径
 5. （可跳过）运行```CREATE USER `crud`@`%` IDENTIFIED WITH mysql_native_password BY 'ssr129631';```创建用户
 6.
+
 （可跳过）运行```GRANT Alter, Alter Routine, Create, Create Routine, Create Temporary Tables, Create View, Delete, Drop, Event, Execute, Grant Option, Index, Insert, Lock Tables, References, Select, Show View, Trigger, Update ON `bookstore`.* TO `crud`@`%`;```
 为他授予数据库权限
 
