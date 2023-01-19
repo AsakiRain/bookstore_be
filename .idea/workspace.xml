@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="搜索会返回结果数">
+    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="更新转储数据库">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bookstore4_be_Web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore4_be_Web.war" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore4_be_Web.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w4/controller/Index.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +64,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/www/bin/tomcat10.1.2/lib&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -69,9 +72,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;问题&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.19390582&quot;
+    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.19390582&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -88,7 +92,14 @@
       <workItem from="1669645417120" duration="2547000" />
       <workItem from="1669696414897" duration="623000" />
       <workItem from="1669721622013" duration="7586000" />
-      <workItem from="1669767261817" duration="478000" />
+      <workItem from="1669767261817" duration="2098000" />
+      <workItem from="1669833765426" duration="15000" />
+      <workItem from="1669834609941" duration="1336000" />
+      <workItem from="1669960642199" duration="102000" />
+      <workItem from="1670372110306" duration="1970000" />
+      <workItem from="1670977390071" duration="125000" />
+      <workItem from="1670977614716" duration="390000" />
+      <workItem from="1670978153409" duration="2590000" />
     </task>
     <task id="LOCAL-00001" summary="查询图书详情不再需要登录，为了作业5做准备">
       <created>1669636365461</created>
@@ -125,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669730478874</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="更新转储数据库">
+      <created>1669767797827</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669767797827</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +166,7 @@
     <MESSAGE value="创建已经存在的书时会失败了" />
     <MESSAGE value="书单搜索现在会搜索简介了" />
     <MESSAGE value="搜索会返回结果数" />
-    <option name="LAST_COMMIT_MESSAGE" value="搜索会返回结果数" />
+    <MESSAGE value="更新转储数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新转储数据库" />
   </component>
 </project>
