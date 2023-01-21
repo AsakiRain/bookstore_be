@@ -2,16 +2,36 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="bookstore4_be:Web exploded" />
+      <artifact name="bookstore_be:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="">
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/bookstore4_be_Web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/bookstore4_be_Web_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/bookstore_be_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/bookstore_be_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore4_be_Web.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/BookCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/BookCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/BookForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/LoginForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/PasswordForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/RegisterForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/UserInfoForm.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,14 +47,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="a8e66c3d-df09-4f48-887c-c8944852afba" />
-        <option name="url" value="https://github.com/AsakiRain/bookstore4_be" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -52,127 +64,141 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectId" id="2IAoDpyPfwcIeQTVCsvAnNaF9vp" />
+  <component name="ProjectId" id="2Kb8bQGCvhHtJVrlZb39j8XmWZB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/www/bin/tomcat10.1.2/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.19390582&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/www/bin/tomcat10.1.2/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19390582",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.2" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/bookstore" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="bookstore_be:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/bookstore" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="2730b224-836f-4424-80cc-a767ae5de798" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64685" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="bookstore_be:Web exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="70d2cde9-9d3c-4270-aca8-eb94ea615f86" name="变更" comment="" />
-      <created>1669633644544</created>
+      <changelist id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="" />
+      <created>1674231994314</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669633644544</updated>
-      <workItem from="1669633648311" duration="1057000" />
-      <workItem from="1669636214830" duration="1357000" />
-      <workItem from="1669643677946" duration="1454000" />
-      <workItem from="1669645417120" duration="2547000" />
-      <workItem from="1669696414897" duration="623000" />
-      <workItem from="1669721622013" duration="7586000" />
-      <workItem from="1669767261817" duration="2098000" />
-      <workItem from="1669833765426" duration="15000" />
-      <workItem from="1669834609941" duration="1336000" />
-      <workItem from="1669960642199" duration="102000" />
-      <workItem from="1670372110306" duration="1970000" />
-      <workItem from="1670977390071" duration="125000" />
-      <workItem from="1670977614716" duration="390000" />
-      <workItem from="1670978153409" duration="2590000" />
+      <updated>1674231994314</updated>
+      <workItem from="1674231997874" duration="96000" />
+      <workItem from="1674232521886" duration="1223000" />
+      <workItem from="1674294143913" duration="524000" />
     </task>
-    <task id="LOCAL-00001" summary="查询图书详情不再需要登录，为了作业5做准备">
-      <created>1669636365461</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1669636365462</updated>
-    </task>
-    <task id="LOCAL-00002" summary="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null">
-      <created>1669723864856</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1669723864856</updated>
-    </task>
-    <task id="LOCAL-00003" summary="创建已经存在的书时会失败了">
-      <created>1669727587051</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1669727587051</updated>
-    </task>
-    <task id="LOCAL-00004" summary="书单搜索现在会搜索简介了">
-      <created>1669727903477</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1669727903477</updated>
-    </task>
-    <task id="LOCAL-00005" summary="搜索会返回结果数">
-      <created>1669730478874</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1669730478874</updated>
-    </task>
-    <task id="LOCAL-00006" summary="更新转储数据库">
-      <created>1669767797827</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1669767797827</updated>
-    </task>
-    <task id="LOCAL-00008" summary="谁是小丑">
-      <created>1674134859808</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1674134859808</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="查询图书详情不再需要登录，为了作业5做准备" />
-    <MESSAGE value="牛逼，拦截器解决CORS跨域问题&#10;sanCheck用于将&quot;null&quot;评分更新为null" />
-    <MESSAGE value="创建已经存在的书时会失败了" />
-    <MESSAGE value="书单搜索现在会搜索简介了" />
-    <MESSAGE value="搜索会返回结果数" />
-    <MESSAGE value="更新转储数据库" />
-    <MESSAGE value="谁是小丑" />
-    <option name="LAST_COMMIT_MESSAGE" value="谁是小丑" />
   </component>
 </project>

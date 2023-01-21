@@ -2,7 +2,7 @@ package com.cxsj1.homework.w5.controller;
 
 import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Claim;
-import com.cxsj1.homework.w5.model.PasswordForm;
+import com.cxsj1.homework.w5.model.Form.PasswordForm;
 import com.cxsj1.homework.w5.model.User;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;

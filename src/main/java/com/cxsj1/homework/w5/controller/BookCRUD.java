@@ -2,8 +2,8 @@ package com.cxsj1.homework.w5.controller;
 
 import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Book;
-import com.cxsj1.homework.w5.model.BookForm;
 import com.cxsj1.homework.w5.model.Claim;
+import com.cxsj1.homework.w5.model.Form.BookForm;
 import com.cxsj1.homework.w5.utils.Req;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;

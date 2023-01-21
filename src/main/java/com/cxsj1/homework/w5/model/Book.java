@@ -1,6 +1,7 @@
 package com.cxsj1.homework.w5.model;
 
 import com.cxsj1.homework.w5.database.DB;
+import com.cxsj1.homework.w5.model.Form.BookForm;
 
 import java.util.Map;
 
@@ -87,8 +88,9 @@ public class Book {
 
     public boolean save() {
         int affectedRows = DB.commit("update books set title = ?, author = ?, publisher = ?, publish_at = ?, page = " +
-                "?, binding = ?, series = ?, translator = ?, original_title = ?, producer = ?, id = ?, url = ?, " +
-                "rating = ?, rating_people = ?, intro = ?, cover = ?, price = ? where isbn = ?", this.title,
+                        "?, binding = ?, series = ?, translator = ?, original_title = ?, producer = ?, id = ?, url = " +
+                        "?, " +
+                        "rating = ?, rating_people = ?, intro = ?, cover = ?, price = ? where isbn = ?", this.title,
                 this.author, this.publisher, this.publish_at, this.page, this.binding, this.series, this.translator,
                 this.original_title, this.producer, this.id, this.url, this.rating, this.rating_people, this.intro,
                 this.cover, this.price, this.isbn);
@@ -97,8 +99,9 @@ public class Book {
 
     public static boolean create(BookForm bookForm) {
         int affectedRows = DB.commit("insert into books (isbn, title, author, publisher, publish_at, page, binding, " +
-                "series, translator, original_title, producer, id, url, rating, rating_people, intro, cover, price) " +
-                "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", bookForm.isbn, bookForm.title,
+                        "series, translator, original_title, producer, id, url, rating, rating_people, intro, cover, " +
+                        "price) " +
+                        "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", bookForm.isbn, bookForm.title,
                 bookForm.author, bookForm.publisher, bookForm.publish_at, bookForm.page, bookForm.binding,
                 bookForm.series, bookForm.translator, bookForm.original_title, bookForm.producer, bookForm.id,
                 bookForm.url, bookForm.rating, bookForm.rating_people, bookForm.intro, bookForm.cover, bookForm.price);
