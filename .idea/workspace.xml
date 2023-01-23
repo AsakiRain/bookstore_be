@@ -9,17 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="feat: 创建账号时发放648积分">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 更新Claim类">
       <change beforePath="$PROJECT_DIR$/genList.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/BookCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/BookCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/BookListSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/BookListSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/BookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Claim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Claim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Token.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +26,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d0fde8bd-bb31-428d-a37b-15becf3af6ac" />
+        <option name="url" value="https://github.com/AsakiRain/bookstore_be" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -185,7 +189,7 @@
       <workItem from="1674294143913" duration="3376000" />
       <workItem from="1674304116260" duration="677000" />
       <workItem from="1674453879712" duration="2093000" />
-      <workItem from="1674477730085" duration="1329000" />
+      <workItem from="1674477730085" duration="1420000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -208,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674456029064</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chore: 更新stock类">
+      <created>1674479086317</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674479086317</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: 更新Claim类">
+      <created>1674479106838</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674479106838</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +247,8 @@
     <MESSAGE value="chore: 把所有的form放在Form类里" />
     <MESSAGE value="chore: 更新readme的api定义" />
     <MESSAGE value="feat: 创建账号时发放648积分" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 创建账号时发放648积分" />
+    <MESSAGE value="chore: 更新stock类" />
+    <MESSAGE value="chore: 更新Claim类" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: 更新Claim类" />
   </component>
 </project>
