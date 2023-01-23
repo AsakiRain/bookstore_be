@@ -40,7 +40,7 @@ public class Register extends HttpServlet {
             return;
         }
 
-        if (!User.create(username, nickname, password, sex)) {
+        if (!User.create(username, nickname, password, sex, 648, "customer")) {
             Res.Json(res, 50000, "注册失败");
             return;
         }
@@ -64,6 +64,6 @@ public class Register extends HttpServlet {
             }
         };
         res.addCookie(new Cookie("token", token));
-        Res.Json(res, 20000, "注册成功", data);
+        Res.Json(res, 20000, "注册成功，您有648点初始积分", data);
     }
 }

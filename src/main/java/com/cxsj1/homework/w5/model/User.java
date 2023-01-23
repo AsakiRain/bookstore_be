@@ -10,6 +10,8 @@ public class User {
     public String nickname;
     public String sex;
     public transient String password;
+    public int balance;
+    public String role;
     public Long created_at;
     public Long updated_at;
 
@@ -18,6 +20,8 @@ public class User {
         this.nickname = (String) data.get("nickname");
         this.password = (String) data.get("password");
         this.sex = (String) data.get("sex");
+        this.balance = (int) data.get("balance");
+        this.role = (String) data.get("role");
         this.created_at = ((Date) data.get("created_at")).getTime();
         this.updated_at = ((Date) data.get("updated_at")).getTime();
     }
@@ -36,14 +40,15 @@ public class User {
     }
 
     public boolean save() {
-        int affectedRows = DB.commit("update users set nickname = ?, sex = ?, password = ? where username = ?",
-                this.nickname, this.sex, this.password, this.username);
+        int affectedRows =
+                DB.commit("update users set nickname = ?, sex = ?, password = ?, balance = ?, role = ? " + "where username = ?",
+                        this.nickname, this.sex, this.password, this.balance, this.role, this.username);
         return affectedRows == 1;
     }
 
-    public static boolean create(String username, String nickname, String password, String sex) {
-        int affectedRows = DB.commit("insert into users (username, nickname, password, sex) values (?, ?, ?, ?)",
-                username, nickname, password, sex);
+    public static boolean create(String username, String nickname, String password, String sex, int balance, String role) {
+        int affectedRows = DB.commit("insert into users (username, nickname, password, sex, balance, role) values (?, ?, ?, ?, ?, ?)",
+                username, nickname, password, sex, balance, role);
         return affectedRows == 1;
     }
 
