@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 更新Claim类">
-      <change beforePath="$PROJECT_DIR$/genList.py" beforeDir="false" />
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 转储数据库文件，删除无用脚本">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Statistic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +191,7 @@
       <workItem from="1674294143913" duration="3376000" />
       <workItem from="1674304116260" duration="677000" />
       <workItem from="1674453879712" duration="2093000" />
-      <workItem from="1674477730085" duration="1420000" />
+      <workItem from="1674477730085" duration="2236000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -226,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674479106838</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="chore: 转储数据库文件，删除无用脚本">
+      <created>1674479233789</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674479233789</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +258,7 @@
     <MESSAGE value="feat: 创建账号时发放648积分" />
     <MESSAGE value="chore: 更新stock类" />
     <MESSAGE value="chore: 更新Claim类" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: 更新Claim类" />
+    <MESSAGE value="chore: 转储数据库文件，删除无用脚本" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: 转储数据库文件，删除无用脚本" />
   </component>
 </project>
