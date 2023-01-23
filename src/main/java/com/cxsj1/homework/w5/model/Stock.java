@@ -52,28 +52,28 @@ public class Stock {
         this.for_sale = bookForm.for_sale;
     }
 
-    public void set(Map<String, Object> item) {
-        this.isbn = (String) item.get("isbn");
-        this.title = (String) item.get("title");
-        this.author = (String) item.get("author");
-        this.publisher = (String) item.get("publisher");
-        this.publish_at = (String) item.get("publish_at");
-        this.page = (String) item.get("page");
-        this.binding = (String) item.get("binding");
-        this.series = (String) item.get("series");
-        this.translator = (String) item.get("translator");
-        this.original_title = (String) item.get("original_title");
-        this.producer = (String) item.get("producer");
-        this.id = (String) item.get("id");
-        this.url = (String) item.get("url");
-        this.rating = (String) item.get("rating");
-        this.rating_people = (String) item.get("rating_people");
-        this.intro = (String) item.get("intro");
-        this.cover = (String) item.get("cover");
-        this.price = (String) item.get("price");
-        this.cost = (String) item.get("cost");
-        this.stock = (String) item.get("stock");
-        this.for_sale = (String) item.get("for_sale");
+    public void set(Map<String, Object> data) {
+        this.isbn = (String) data.get("isbn");
+        this.title = (String) data.get("title");
+        this.author = (String) data.get("author");
+        this.publisher = (String) data.get("publisher");
+        this.publish_at = (String) data.get("publish_at");
+        this.page = (String) data.get("page");
+        this.binding = (String) data.get("binding");
+        this.series = (String) data.get("series");
+        this.translator = (String) data.get("translator");
+        this.original_title = (String) data.get("original_title");
+        this.producer = (String) data.get("producer");
+        this.id = (String) data.get("id");
+        this.url = (String) data.get("url");
+        this.rating = (String) data.get("rating");
+        this.rating_people = (String) data.get("rating_people");
+        this.intro = (String) data.get("intro");
+        this.cover = (String) data.get("cover");
+        this.price = (String) data.get("price");
+        this.cost = (String) data.get("cost");
+        this.stock = (String) data.get("stock");
+        this.for_sale = (String) data.get("for_sale");
     }
 
     public String get(String isbn) {
