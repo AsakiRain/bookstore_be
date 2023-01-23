@@ -1,6 +1,6 @@
 package com.cxsj1.homework.w5.controller;
 
-import com.cxsj1.homework.w5.model.Book;
+import com.cxsj1.homework.w5.model.Stock;
 import com.cxsj1.homework.w5.model.BookList;
 import com.cxsj1.homework.w5.model.Claim;
 import com.cxsj1.homework.w5.utils.Res;
@@ -39,7 +39,7 @@ public class BookListSearch extends HttpServlet {
         }
 
         BookList bookList = new BookList(claim.username);
-        ArrayList<Book> search_result = bookList.search(keyword);
+        ArrayList<Stock> search_result = bookList.search(keyword);
         HashMap<String, Object> data = new HashMap<>() {
             {
                 put("search_result", search_result);

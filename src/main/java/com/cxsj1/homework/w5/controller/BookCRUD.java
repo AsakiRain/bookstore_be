@@ -1,7 +1,7 @@
 package com.cxsj1.homework.w5.controller;
 
 import com.alibaba.fastjson2.JSON;
-import com.cxsj1.homework.w5.model.Book;
+import com.cxsj1.homework.w5.model.Stock;
 import com.cxsj1.homework.w5.model.Claim;
 import com.cxsj1.homework.w5.model.Form.BookForm;
 import com.cxsj1.homework.w5.utils.Req;
@@ -27,8 +27,8 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        Book book = new Book();
-        err = book.get(isbn);
+        Stock stock = new Stock();
+        err = stock.get(isbn);
         if (err != null) {
             Res.Json(res, 42205, err);
             return;
@@ -36,7 +36,7 @@ public class BookCRUD extends HttpServlet {
 
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("book_info", book);
+                put("book_info", stock);
             }
         };
         Res.Json(res, 20000, "获取成功", data);
@@ -69,12 +69,12 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        if (Book.hasBook(bookForm.isbn)) {
+        if (Stock.hasBook(bookForm.isbn)) {
             Res.Json(res, 42202, "图书已存在");
             return;
         }
 
-        if (!Book.create(bookForm)) {
+        if (!Stock.create(bookForm)) {
             Res.Json(res, 42205, "创建图书失败");
             return;
         }
@@ -114,15 +114,15 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        Book book = new Book();
-        err = book.get(bookForm.isbn);
+        Stock stock = new Stock();
+        err = stock.get(bookForm.isbn);
         if (err != null) {
             Res.Json(res, 42205, err);
             return;
         }
 
-        book.set(bookForm);
-        if (!book.save()) {
+        stock.set(bookForm);
+        if (!stock.save()) {
             Res.Json(res, 42205, "更新图书失败");
             return;
         }
@@ -157,7 +157,7 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        if (!Book.delete(isbn)) {
+        if (!Stock.delete(isbn)) {
             Res.Json(res, 42205, "没有这本书");
             return;
         }

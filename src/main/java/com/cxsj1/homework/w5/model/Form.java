@@ -42,5 +42,8 @@ public class Form {
         public String intro;
         public String cover;
         public String price;
+        public String cost;
+        public String stock;
+        public String for_sale;
     }
 }

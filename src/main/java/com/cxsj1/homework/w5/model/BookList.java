@@ -13,33 +13,33 @@ public class BookList {
         this.count = DB.countBy("select count(*) from lists where username = ?", username);
     }
 
-    public ArrayList<Book> list(int page) {
+    public ArrayList<Stock> list(int page) {
         List<HashMap<String, Object>> list = DB.queryAll(("SELECT b.* FROM lists AS l INNER JOIN books b ON l.isbn = " +
                 "b" +
                 ".isbn" +
                 " WHERE username = ? LIMIT ").concat(String.valueOf((page - 1) * 20)).concat(", 20"), this.username);
 
-        ArrayList<Book> books = new ArrayList<>();
+        ArrayList<Stock> stocks = new ArrayList<>();
         for (Map<String, Object> item : list) {
-            Book book = new Book();
-            book.set(item);
-            books.add(book);
+            Stock stock = new Stock();
+            stock.set(item);
+            stocks.add(stock);
         }
-        return books;
+        return stocks;
     }
 
-    public ArrayList<Book> search(String keyword) {
+    public ArrayList<Stock> search(String keyword) {
         List<HashMap<String, Object>> list = DB.queryAll(("SELECT b.* FROM lists AS l INNER JOIN books b ON l.isbn = " +
                 "b.isbn WHERE username = ? AND (b.title LIKE ? OR b.intro LIKE ?)"), this.username, "%" + keyword +
                 "%", "%" + keyword + "%");
 
-        ArrayList<Book> books = new ArrayList<>();
+        ArrayList<Stock> stocks = new ArrayList<>();
         for (HashMap<String, Object> item : list) {
-            Book book = new Book();
-            book.set(item);
-            books.add(book);
+            Stock stock = new Stock();
+            stock.set(item);
+            stocks.add(stock);
         }
-        return books;
+        return stocks;
     }
 
     public boolean add(String isbn) {
