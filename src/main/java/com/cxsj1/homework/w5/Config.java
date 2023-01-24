@@ -21,4 +21,15 @@ public class Config {
         public static final String ALLOW_HEADERS = "Content-Type, Authorization";
         public static final String ALLOW_CREDENTIALS = "true";
     }
+
+    public static final class PERMISSION_CONFIG {
+        public static final String[] PUBLIC_PATH = {"/", "/login", "/register", "/goods/*", "/book/*"};
+        public static final String[] PUBLIC_METHOD = {"OPTIONS"};
+        public static final String[] CUSTOMER_PATH = {"/user/*", "/order/*"};
+        public static final String[] MANAGER_PATH = {"/user/*", "/order/*", "/manage/*"};
+        public static final String[] ADMIN_PATH = {"/user/*", "/order/*", "/manage/*", "/admin/*"};
+        public static final boolean VERBOSE = false;
+        public static final boolean LOG = false;
+        public static final String PREFIX = "/api";
+    }
 }

@@ -6,7 +6,6 @@ public class Claim {
     public String username;
     public String nickname;
     public String sex;
-
     public String role;
 
     public void set(DecodedJWT claims) {
