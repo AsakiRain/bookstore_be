@@ -9,17 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 将CORS配置项移入config">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F0_Encoding.java" afterDir="false" />
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="feat: 请求路径匹配工具，用于路由匹配">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F2_Permission.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/URLPath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/CORS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F1_CORS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Claim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Claim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Res.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Res.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +201,7 @@
       <workItem from="1674453879712" duration="2093000" />
       <workItem from="1674477730085" duration="6106000" />
       <workItem from="1674489919252" duration="698000" />
-      <workItem from="1674527486047" duration="27190000" />
+      <workItem from="1674527486047" duration="27493000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -336,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674541613164</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="chore: 准备权限配置，修改index路由，修改readme">
+      <created>1674564323947</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674564323947</updated>
+    </task>
+    <task id="LOCAL-00020" summary="chore: 添加Encoding过滤器设置响应编码，修改编码器文件名确保加载顺序">
+      <created>1674564400827</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674564400827</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +379,9 @@
     <MESSAGE value="chore: 完善搜索和列表功能" />
     <MESSAGE value="fix: 搜索不存在的图书时提前报错" />
     <MESSAGE value="chore: 将CORS配置项移入config" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: 将CORS配置项移入config" />
+    <MESSAGE value="chore: 准备权限配置，修改index路由，修改readme" />
+    <MESSAGE value="chore: 添加Encoding过滤器设置响应编码，修改编码器文件名确保加载顺序" />
+    <MESSAGE value="feat: 请求路径匹配工具，用于路由匹配" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 请求路径匹配工具，用于路由匹配" />
   </component>
 </project>
