@@ -23,10 +23,10 @@ public class Stock {
     public String rating_people;
     public String intro;
     public String cover;
-    public String price;
-    public String cost;
-    public String stock;
-    public String for_sale;
+    public float price;
+    public int cost;
+    public int stock;
+    public boolean for_sale;
 
     public Stock(String isbn) {
         if (!hasBook(isbn)) {
@@ -36,7 +36,7 @@ public class Stock {
     }
 
     public Stock(StockForm stockForm) {
-        int affectedRows = DB.commit("insert into books(isbn, title, author, publisher, publish_at, page, binding, " +
+        int affectedRows = DB.commit("insert into stocks(isbn, title, author, publisher, publish_at, page, binding, " +
                 "series, " + "translator, original_title, producer, id, url, rating, rating_people, intro, cover, " + "price, cost, stock, for_sale) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, " + "?, ?, ?, ?, ?)", stockForm.isbn, stockForm.title, stockForm.author, stockForm.publisher, stockForm.publish_at, stockForm.page, stockForm.binding, stockForm.series, stockForm.translator, stockForm.original_title, stockForm.producer, stockForm.id, stockForm.url, stockForm.rating, stockForm.rating_people, stockForm.intro, stockForm.cover, stockForm.price, stockForm.cost, stockForm.stock, stockForm.for_sale);
         if (affectedRows == 1) {
             this._get(stockForm.isbn);
@@ -90,29 +90,29 @@ public class Stock {
         this.rating_people = (String) data.get("rating_people");
         this.intro = (String) data.get("intro");
         this.cover = (String) data.get("cover");
-        this.price = (String) data.get("price");
-        this.cost = (String) data.get("cost");
-        this.stock = (String) data.get("stock");
-        this.for_sale = (String) data.get("for_sale");
+        this.price = (float) data.get("price");
+        this.cost = (int) data.get("cost");
+        this.stock = (int) data.get("stock");
+        this.for_sale = (boolean) data.get("for_sale");
     }
 
     private void _get(String isbn) {
-        HashMap<String, Object> map = DB.queryOne("select * from books where isbn = ?", isbn);
+        HashMap<String, Object> map = DB.queryOne("select * from stocks where isbn = ?", isbn);
         this._set(map);
     }
 
     public static boolean hasBook(String isbn) {
-        return DB.hasRecord("select * from books where isbn = ?", isbn);
+        return DB.hasRecord("select * from stocks where isbn = ?", isbn);
     }
 
     public static boolean delete(String isbn) {
-        int affectedRows = DB.commit("delete from books where isbn = ?", isbn);
+        int affectedRows = DB.commit("delete from stocks where isbn = ?", isbn);
         return affectedRows == 1;
     }
 
     public void save() {
         int affectedRows =
-                DB.commit("update books set title = ?, author = ?, publisher = ?, publish_at = ?, page = " + "?, " +
+                DB.commit("update stocks set title = ?, author = ?, publisher = ?, publish_at = ?, page = " + "?, " +
                         "binding =" + " ?, series = ?, translator = ?, original_title = ?, producer = ?, id " + "=" + " ?," + " url " + "= " + "?, " + "rating = ?, rating_people = ?, intro = ?, cover = ?, price " + "= ?, " + "cost " + "= ?, " + "stock = ?," + " " + "for_sale = ? where isbn = ?", this.title, this.author, this.publisher, this.publish_at, this.page, this.binding, this.series, this.translator, this.original_title, this.producer, this.id, this.url, this.rating, this.rating_people, this.intro, this.cover, this.price, this.cost, this.stock, this.for_sale, this.isbn);
         if (affectedRows != 1) {
             throw new RuntimeException("更新库存失败");

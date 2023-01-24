@@ -41,9 +41,9 @@ public class Form {
         public String rating_people;
         public String intro;
         public String cover;
-        public String price;
-        public String cost;
-        public String stock;
-        public String for_sale;
+        public float price;
+        public int cost;
+        public int stock;
+        public boolean for_sale;
     }
 }
