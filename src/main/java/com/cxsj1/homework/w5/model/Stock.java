@@ -3,7 +3,7 @@ package com.cxsj1.homework.w5.model;
 import com.cxsj1.homework.w5.database.DB;
 import com.cxsj1.homework.w5.model.Form.StockForm;
 
-import java.util.Map;
+import java.util.HashMap;
 
 public class Stock {
     public String isbn;
@@ -45,6 +45,9 @@ public class Stock {
         }
     }
 
+    public Stock(HashMap<String,Object> data) {
+        this._set(data);
+    }
     public void set(StockForm stockForm) {
         this.isbn = stockForm.isbn;
         this.title = stockForm.title;
@@ -69,7 +72,7 @@ public class Stock {
         this.for_sale = stockForm.for_sale;
     }
 
-    private void _set(Map<String, Object> data) {
+    private void _set(HashMap<String, Object> data) {
         this.isbn = (String) data.get("isbn");
         this.title = (String) data.get("title");
         this.author = (String) data.get("author");
@@ -94,7 +97,7 @@ public class Stock {
     }
 
     private void _get(String isbn) {
-        Map<String, Object> map = DB.queryOne("select * from books where isbn = ?", isbn);
+        HashMap<String, Object> map = DB.queryOne("select * from books where isbn = ?", isbn);
         this._set(map);
     }
 

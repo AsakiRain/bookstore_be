@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/api/user/password")
-public class Password extends HttpServlet {
+public class ChangePassword extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String err;

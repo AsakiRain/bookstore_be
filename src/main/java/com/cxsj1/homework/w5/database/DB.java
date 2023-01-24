@@ -51,11 +51,11 @@ public class DB {
         return affectedRows;
     }
 
-    public static List<HashMap<String, Object>> queryAll(String sql, Object... params) {
+    public static ArrayList<HashMap<String, Object>> queryAll(String sql, Object... params) {
         Connection conn = getConn();
         PreparedStatement ps = null;
         ResultSet rs = null;
-        List<HashMap<String, Object>> list = new ArrayList<>();
+        ArrayList<HashMap<String, Object>> list = new ArrayList<>();
         try {
             ps = conn.prepareStatement(sql);
             if (params != null && params.length > 0) {
