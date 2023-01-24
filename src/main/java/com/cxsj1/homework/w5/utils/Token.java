@@ -26,8 +26,7 @@ public class Token {
             if (claims == null) {
                 return "解析token失败";
             }
-            claim.set(claims.getClaim("username").asString(), claims.getClaim("nickname").asString(),
-                    claims.getClaim("sex").asString(), claims.getClaim("role").asString());
+            claim.set(claims);
         } catch (Exception e) {
 //            e.printStackTrace();
             return e.getMessage();

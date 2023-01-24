@@ -1,7 +1,7 @@
 package com.cxsj1.homework.w5.model;
 
 import com.cxsj1.homework.w5.database.DB;
-import com.cxsj1.homework.w5.model.Form.BookForm;
+import com.cxsj1.homework.w5.model.Form.StockForm;
 
 import java.util.Map;
 
@@ -35,45 +35,45 @@ public class Stock {
         this._get(isbn);
     }
 
-    public Stock(BookForm bookForm) {
+    public Stock(StockForm stockForm) {
         int affectedRows =
                 DB.commit("insert into books(isbn, title, author, publisher, publish_at, page, binding, series, " +
                                 "translator, original_title, producer, id, url, rating, rating_people, intro, cover, " +
                                 "price, cost, stock, for_sale) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, " +
-                        "?, ?, ?, ?, ?)", bookForm.isbn, bookForm.title, bookForm.author, bookForm.publisher,
-                        bookForm.publish_at, bookForm.page, bookForm.binding, bookForm.series, bookForm.translator,
-                        bookForm.original_title, bookForm.producer, bookForm.id, bookForm.url, bookForm.rating,
-                        bookForm.rating_people, bookForm.intro, bookForm.cover, bookForm.price, bookForm.cost,
-                        bookForm.stock, bookForm.for_sale);
+                        "?, ?, ?, ?, ?)", stockForm.isbn, stockForm.title, stockForm.author, stockForm.publisher,
+                        stockForm.publish_at, stockForm.page, stockForm.binding, stockForm.series, stockForm.translator,
+                        stockForm.original_title, stockForm.producer, stockForm.id, stockForm.url, stockForm.rating,
+                        stockForm.rating_people, stockForm.intro, stockForm.cover, stockForm.price, stockForm.cost,
+                        stockForm.stock, stockForm.for_sale);
         if (affectedRows == 1) {
-            this._get(bookForm.isbn);
+            this._get(stockForm.isbn);
         } else {
             throw new RuntimeException("Insert failed");
         }
     }
 
-    public void set(BookForm bookForm) {
-        this.isbn = bookForm.isbn;
-        this.title = bookForm.title;
-        this.author = bookForm.author;
-        this.publisher = bookForm.publisher;
-        this.publish_at = bookForm.publish_at;
-        this.page = bookForm.page;
-        this.binding = bookForm.binding;
-        this.series = bookForm.series;
-        this.translator = bookForm.translator;
-        this.original_title = bookForm.original_title;
-        this.producer = bookForm.producer;
-        this.id = bookForm.id;
-        this.url = bookForm.url;
-        this.rating = bookForm.rating;
-        this.rating_people = bookForm.rating_people;
-        this.intro = bookForm.intro;
-        this.cover = bookForm.cover;
-        this.price = bookForm.price;
-        this.cost = bookForm.cost;
-        this.stock = bookForm.stock;
-        this.for_sale = bookForm.for_sale;
+    public void set(StockForm stockForm) {
+        this.isbn = stockForm.isbn;
+        this.title = stockForm.title;
+        this.author = stockForm.author;
+        this.publisher = stockForm.publisher;
+        this.publish_at = stockForm.publish_at;
+        this.page = stockForm.page;
+        this.binding = stockForm.binding;
+        this.series = stockForm.series;
+        this.translator = stockForm.translator;
+        this.original_title = stockForm.original_title;
+        this.producer = stockForm.producer;
+        this.id = stockForm.id;
+        this.url = stockForm.url;
+        this.rating = stockForm.rating;
+        this.rating_people = stockForm.rating_people;
+        this.intro = stockForm.intro;
+        this.cover = stockForm.cover;
+        this.price = stockForm.price;
+        this.cost = stockForm.cost;
+        this.stock = stockForm.stock;
+        this.for_sale = stockForm.for_sale;
     }
 
     private void _set(Map<String, Object> data) {

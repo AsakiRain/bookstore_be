@@ -3,7 +3,7 @@ package com.cxsj1.homework.w5.controller;
 import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Stock;
 import com.cxsj1.homework.w5.model.Claim;
-import com.cxsj1.homework.w5.model.Form.BookForm;
+import com.cxsj1.homework.w5.model.Form.StockForm;
 import com.cxsj1.homework.w5.utils.Req;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
@@ -58,30 +58,30 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        BookForm bookForm = JSON.parseObject(req.getInputStream().readAllBytes(), BookForm.class);
-        if (bookForm == null) {
+        StockForm stockForm = JSON.parseObject(req.getInputStream().readAllBytes(), StockForm.class);
+        if (stockForm == null) {
             Res.Error(res, 400, 40002, "参数不足");
             return;
         }
 
-        if (Req.hasEmpty(bookForm.isbn, bookForm.title)) {
+        if (Req.hasEmpty(stockForm.isbn, stockForm.title)) {
             Res.Error(res, 422, 42201, "isbn和title不能为空");
             return;
         }
 
-        if (Stock.hasBook(bookForm.isbn)) {
+        if (Stock.hasBook(stockForm.isbn)) {
             Res.Json(res, 42202, "图书已存在");
             return;
         }
 
-        if (!Stock.create(bookForm)) {
+        if (!Stock.create(stockForm)) {
             Res.Json(res, 42205, "创建图书失败");
             return;
         }
 
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("book_info", bookForm);
+                put("book_info", stockForm);
             }
         };
         Res.Json(res, 20000, "创建图书成功", data);
@@ -103,25 +103,25 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        BookForm bookForm = JSON.parseObject(req.getInputStream().readAllBytes(), BookForm.class);
-        if (bookForm == null) {
+        StockForm stockForm = JSON.parseObject(req.getInputStream().readAllBytes(), StockForm.class);
+        if (stockForm == null) {
             Res.Error(res, 400, 40002, "参数不足");
             return;
         }
 
-        if (Req.hasEmpty(bookForm.isbn, bookForm.title)) {
+        if (Req.hasEmpty(stockForm.isbn, stockForm.title)) {
             Res.Error(res, 422, 42201, "isbn和title不能为空");
             return;
         }
 
         Stock stock = new Stock();
-        err = stock.get(bookForm.isbn);
+        err = stock.get(stockForm.isbn);
         if (err != null) {
             Res.Json(res, 42205, err);
             return;
         }
 
-        stock.set(bookForm);
+        stock.set(stockForm);
         if (!stock.save()) {
             Res.Json(res, 42205, "更新图书失败");
             return;
@@ -129,7 +129,7 @@ public class BookCRUD extends HttpServlet {
 
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("book_info", bookForm);
+                put("book_info", stockForm);
             }
         };
         Res.Json(res, 20000, "更新图书成功", data);

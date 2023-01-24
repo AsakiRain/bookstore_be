@@ -23,7 +23,7 @@ public class Form {
         public String sex;
     }
 
-    public static class BookForm {
+    public static class StockForm {
         public String isbn;
         public String title;
         public String author;
