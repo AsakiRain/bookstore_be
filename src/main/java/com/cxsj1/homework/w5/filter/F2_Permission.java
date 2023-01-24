@@ -14,9 +14,11 @@ import com.cxsj1.homework.w5.Config.PERMISSION_CONFIG;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 @WebFilter(filterName = "Permission", urlPatterns = "/*")
 public class F2_Permission implements Filter {
+    private HashMap<String, Integer> roleMap;
     private ArrayList<String> PUBLIC_METHOD;
     private String[] PUBLIC_PATH;
     private String[] CUSTOMER_PATH;
@@ -36,6 +38,14 @@ public class F2_Permission implements Filter {
         this.ADMIN_PATH = PERMISSION_CONFIG.ADMIN_PATH;
         this.LOG = PERMISSION_CONFIG.LOG;
         this.urlPath = new URLPath(PERMISSION_CONFIG.PREFIX, PERMISSION_CONFIG.VERBOSE);
+        this.roleMap = new HashMap<>() {
+            {
+                put("public", 0);
+                put("customer", 1);
+                put("manager", 2);
+                put("admin", 3);
+            }
+        };
     }
 
     @Override
@@ -135,7 +145,7 @@ public class F2_Permission implements Filter {
         // 开始校验用户权限
         User user = new User(claim.username);
 
-        if (requiredRole.equals(user.role)) {
+        if (this.roleMap.get(requiredRole) <= this.roleMap.get(user.role)) {
             System.out.printf("%s %s [%s]%s => [%s]PASS\n", method, path, user.role, user.username, requiredRole);
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
