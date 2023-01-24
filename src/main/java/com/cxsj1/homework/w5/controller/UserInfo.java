@@ -34,12 +34,11 @@ public class UserInfo extends HttpServlet {
             return;
         }
 
-        User user = new User();
-        err = User.get(claim.username, user);
-        if (err != null) {
-            Res.Json(res, 42205, err);
+        if (!User.hasUser(claim.username)) {
+            Res.Json(res, 42205, "用户不存在");
             return;
         }
+        User user = new User(claim.username);
 
         Map<String, Object> data = new HashMap<>() {
             {
@@ -66,12 +65,11 @@ public class UserInfo extends HttpServlet {
             return;
         }
 
-        User user = new User();
-        err = User.get(claim.username, user);
-        if (err != null) {
-            Res.Json(res, 42205, err);
+        if (!User.hasUser(claim.username)) {
+            Res.Json(res, 42205, "用户不存在");
             return;
         }
+        User user = new User(claim.username);
 
         UserInfoForm userInfoForm = JSON.parseObject(req.getInputStream().readAllBytes(), UserInfoForm.class);
         if (userInfoForm == null) {
@@ -88,10 +86,7 @@ public class UserInfo extends HttpServlet {
 
         user.nickname = nickname;
         user.sex = sex;
-        if (!user.save()) {
-            Res.Json(res, 50001, "更新信息失败");
-            return;
-        }
+        user.save();
 
         Res.Json(res, 20000, "更新信息成功");
     }

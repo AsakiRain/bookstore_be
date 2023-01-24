@@ -18,7 +18,7 @@ import java.util.HashMap;
 @WebServlet("/api/register")
 public class Register extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, RuntimeException {
         String err;
         RegisterForm registerForm = JSON.parseObject(req.getInputStream().readAllBytes(), RegisterForm.class);
         if (registerForm == null) {
@@ -40,17 +40,7 @@ public class Register extends HttpServlet {
             return;
         }
 
-        if (!User.create(username, nickname, password, sex, 648, "customer")) {
-            Res.Json(res, 50000, "注册失败");
-            return;
-        }
-
-        User user = new User();
-        err = User.get(username, user);
-        if (err != null) {
-            Res.Json(res, 42203, err);
-            return;
-        }
+        User user = new User(registerForm);
 
         String token = Token.create(user.username, user.nickname, user.sex);
         if (token == null) {

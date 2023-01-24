@@ -60,10 +60,12 @@ public class User {
         this._set(map);
     }
 
-    public boolean save() {
+    public void save() {
         int affectedRows =
                 DB.commit("update users set nickname = ?, sex = ?, password = ?, balance = ?, role = ? " + "where " + "username = ?", this.nickname, this.sex, this.password, this.balance, this.role, this.username);
-        return affectedRows == 1;
+        if (affectedRows != 1) {
+            throw new RuntimeException("用户保存失败");
+        }
     }
 
     public boolean checkPassword(String password) {

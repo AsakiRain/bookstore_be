@@ -31,12 +31,11 @@ public class Password extends HttpServlet {
             return;
         }
 
-        User user = new User();
-        err = User.get(claim.username, user);
-        if (err != null) {
-            Res.Json(res, 42205, err);
+        if (!User.hasUser(claim.username)) {
+            Res.Json(res, 42205, "用户不存在");
             return;
         }
+        User user = new User(claim.username);
 
         PasswordForm passwordForm = JSON.parseObject(req.getInputStream().readAllBytes(), PasswordForm.class);
         if (passwordForm == null) {
@@ -52,10 +51,7 @@ public class Password extends HttpServlet {
         }
 
         user.password = newPassword;
-        if (!user.save()) {
-            Res.Json(res, 42205, "修改密码失败");
-            return;
-        }
+        user.save();
 
         Res.Json(res, 20000, "修改密码成功");
     }

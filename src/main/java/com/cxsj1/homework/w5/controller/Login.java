@@ -33,15 +33,14 @@ public class Login extends HttpServlet {
             return;
         }
 
-        User user = new User();
-        err = User.get(username, user);
-        if (err != null) {
-            Res.Json(res, 42203, err);
+        if (!User.hasUser(username)) {
+            Res.Json(res, 42201, "用户名或密码错误");
             return;
         }
 
+        User user = new User(username);
         if (!user.checkPassword(password)) {
-            Res.Json(res, 42204, "密码错误");
+            Res.Json(res, 42204, "用户名或密码错误");
             return;
         }
 
