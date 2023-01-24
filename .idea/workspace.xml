@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="feat: 请求路径匹配工具，用于路由匹配">
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="feat: Permission权限过滤器，兼具JWTToken合法性检测和用户存在检测功能">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F2_Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/URLPath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +200,7 @@
       <workItem from="1674453879712" duration="2093000" />
       <workItem from="1674477730085" duration="6106000" />
       <workItem from="1674489919252" duration="698000" />
-      <workItem from="1674527486047" duration="27493000" />
+      <workItem from="1674527486047" duration="27568000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -343,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674564400827</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: 请求路径匹配工具，用于路由匹配">
+      <created>1674564455053</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674564455053</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,6 +388,7 @@
     <MESSAGE value="chore: 准备权限配置，修改index路由，修改readme" />
     <MESSAGE value="chore: 添加Encoding过滤器设置响应编码，修改编码器文件名确保加载顺序" />
     <MESSAGE value="feat: 请求路径匹配工具，用于路由匹配" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 请求路径匹配工具，用于路由匹配" />
+    <MESSAGE value="feat: Permission权限过滤器，兼具JWTToken合法性检测和用户存在检测功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Permission权限过滤器，兼具JWTToken合法性检测和用户存在检测功能" />
   </component>
 </project>
