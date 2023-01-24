@@ -22,31 +22,23 @@ public class Res {
 
     public static void Json(HttpServletResponse res, int code, String message) throws IOException {
         res.setContentType("application/json");
-        res.setCharacterEncoding("UTF-8");
-        PrintWriter w = res.getWriter();
-        Response payload = new Response(code, message, null);
-        w.write(JSON.toJSONString(payload));
-    }
-    public static void Json(HttpServletResponse res, int code, String message, Map<String,Object> data) throws IOException {
-        res.setContentType("application/json");
-        res.setCharacterEncoding("UTF-8");
-        PrintWriter w = res.getWriter();
-        Response payload = new Response(code, message, data);
-        w.write(JSON.toJSONString(payload));
-    }
-    public static void Error(HttpServletResponse res, int status, int code, String message) throws IOException {
-        res.setStatus(status);
-        res.setContentType("application/json");
-        res.setCharacterEncoding("UTF-8");
         PrintWriter w = res.getWriter();
         Response payload = new Response(code, message, null);
         w.write(JSON.toJSONString(payload));
     }
 
-    public static void CORS(HttpServletResponse res) {
-        res.setHeader("Access-Control-Allow-Origin", "*");
-        res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-        res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-        res.setHeader("Access-Control-Allow-Credentials", "true");
+    public static void Json(HttpServletResponse res, int code, String message, Map<String, Object> data) throws IOException {
+        res.setContentType("application/json");
+        PrintWriter w = res.getWriter();
+        Response payload = new Response(code, message, data);
+        w.write(JSON.toJSONString(payload));
+    }
+
+    public static void Error(HttpServletResponse res, int status, int code, String message) throws IOException {
+        res.setStatus(status);
+        res.setContentType("application/json;charset=UTF-8");
+        PrintWriter w = res.getWriter();
+        Response payload = new Response(code, message, null);
+        w.write(JSON.toJSONString(payload));
     }
 }
