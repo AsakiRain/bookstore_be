@@ -15,33 +15,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 
-@WebServlet("/api/book")
-public class BookCRUD extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String err;
-
-        String isbn = req.getParameter("isbn");
-        if (isbn == null) {
-            Res.Error(res, 422, 42201, "缺少参数");
-            return;
-        }
-
-        Stock stock = new Stock();
-        err = stock.get(isbn);
-        if (err != null) {
-            Res.Json(res, 42205, err);
-            return;
-        }
-
-        HashMap<String, Object> data = new HashMap<>() {
-            {
-                put("book_info", stock);
-            }
-        };
-        Res.Json(res, 20000, "获取成功", data);
-    }
-
+@WebServlet("/api/manage/stock")
+public class ManageStock extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String err;
@@ -64,8 +39,8 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        if (Req.hasEmpty(stockForm.isbn, stockForm.title)) {
-            Res.Error(res, 422, 42201, "isbn和title不能为空");
+        if (Req.hasEmpty(stockForm.isbn, stockForm.title, stockForm.cost, stockForm.stock, stockForm.for_sale)) {
+            Res.Error(res, 422, 42201, "参数校验不通过");
             return;
         }
 
@@ -74,14 +49,11 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        if (!Stock.create(stockForm)) {
-            Res.Json(res, 42205, "创建图书失败");
-            return;
-        }
+        Stock stock = new Stock(stockForm);
 
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("book_info", stockForm);
+                put("book_info", stock);
             }
         };
         Res.Json(res, 20000, "创建图书成功", data);
@@ -114,22 +86,18 @@ public class BookCRUD extends HttpServlet {
             return;
         }
 
-        Stock stock = new Stock();
-        err = stock.get(stockForm.isbn);
-        if (err != null) {
-            Res.Json(res, 42205, err);
+        if (!Stock.hasBook(stockForm.isbn)) {
+            Res.Json(res, 42203, "图书不存在");
             return;
         }
 
+        Stock stock = new Stock(stockForm.isbn);
         stock.set(stockForm);
-        if (!stock.save()) {
-            Res.Json(res, 42205, "更新图书失败");
-            return;
-        }
+        stock.save();
 
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("book_info", stockForm);
+                put("book_info", stock);
             }
         };
         Res.Json(res, 20000, "更新图书成功", data);
