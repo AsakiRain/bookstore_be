@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="fix: 修复高权限不能访问低权限api的问题">
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/PurchaseOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,25 +75,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/www/bin/tomcat10.1.2/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "工件",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.19390582",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/www/bin/tomcat10.1.2/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.19390582&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cxsj1.homework.w5.controller" />
@@ -201,7 +204,8 @@
       <workItem from="1674453879712" duration="2093000" />
       <workItem from="1674477730085" duration="6106000" />
       <workItem from="1674489919252" duration="698000" />
-      <workItem from="1674527486047" duration="29675000" />
+      <workItem from="1674527486047" duration="31844000" />
+      <workItem from="1674568842978" duration="1018000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -378,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674566179893</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介">
+      <created>1674566668542</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1674566668542</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +407,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: 把所有的form放在Form类里" />
     <MESSAGE value="chore: 更新readme的api定义" />
     <MESSAGE value="feat: 创建账号时发放648积分" />
     <MESSAGE value="chore: 更新stock类" />
@@ -421,6 +431,7 @@
     <MESSAGE value="chore: 删除多余的登陆检查代码" />
     <MESSAGE value="chore: 修改hasEmpty函数使其支持null检测" />
     <MESSAGE value="fix: 修复高权限不能访问低权限api的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复高权限不能访问低权限api的问题" />
+    <MESSAGE value="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介" />
   </component>
 </project>

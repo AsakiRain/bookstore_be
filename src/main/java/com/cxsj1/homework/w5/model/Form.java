@@ -46,4 +46,13 @@ public class Form {
         public int stock;
         public boolean for_sale;
     }
+
+    public final static class PurchaseOrderForm {
+        public String isbn;
+    }
+
+    public final static class UpdateOrderForm {
+        public String serial;
+        public Short status;
+    }
 }

@@ -2,8 +2,8 @@ package com.cxsj1.homework.w5.controller;
 
 import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Claim;
-import com.cxsj1.homework.w5.model.User;
 import com.cxsj1.homework.w5.model.Form.UserInfoForm;
+import com.cxsj1.homework.w5.model.User;
 import com.cxsj1.homework.w5.utils.Req;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
@@ -14,7 +14,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 @WebServlet("/api/user/info")
 public class UserInfo extends HttpServlet {
@@ -40,7 +39,7 @@ public class UserInfo extends HttpServlet {
         }
         User user = new User(claim.username);
 
-        Map<String, Object> data = new HashMap<>() {
+        HashMap<String, Object> data = new HashMap<>() {
             {
                 put("user_info", user);
             }

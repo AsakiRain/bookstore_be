@@ -53,8 +53,10 @@
 | PUT    | /user/info                                  | 修改用户信息     | ✅                 |
 | PUT    | /user/password                              | 修改密码       | ✅                 |
 | GET    | /order/list?page={page}                     | 获取订单列表     | 🤡未做              |
+| GET    | /order/purchase?isbn={isbn}                 | 购买前信息展示    | 🤡未做              |
 | POST   | /order/purchase?isbn={isbn}                 | 购买书籍       | 🤡未做              |
 | GET    | /order/show?serial={serial}                 | 查看订单状态     | 🤡未做              |
+| POST   | /order/finish?serial={serial}               | 完成订单       | 🤡未做              |
 | DELETE | /manage/stock?isbn={isbn}                   | 删除书籍       | ✅                 |
 | PUT    | /manage/stock                               | 修改书籍信息     | ✅                 |
 | POST   | /manage/stock                               | 添加书籍       | ✅                 |
