@@ -19,7 +19,6 @@ import java.util.HashMap;
 public class Register extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, RuntimeException {
-        String err;
         RegisterForm registerForm = JSON.parseObject(req.getInputStream().readAllBytes(), RegisterForm.class);
         if (registerForm == null) {
             Res.Error(res, 400, 40002, "参数不足或有误");

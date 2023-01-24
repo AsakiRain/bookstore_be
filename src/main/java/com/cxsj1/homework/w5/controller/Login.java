@@ -19,7 +19,6 @@ import java.util.HashMap;
 public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String err;
         LoginForm loginForm = JSON.parseObject(req.getInputStream().readAllBytes(), LoginForm.class);
         if (loginForm == null) {
             Res.Error(res, 400, 40002, "用户名或密码不能为空");
