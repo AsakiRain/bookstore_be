@@ -11,11 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 删除多余的登陆检查代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ChangePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ManageStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ManageStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F2_Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F2_Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Req.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Req.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1674453879712" duration="2093000" />
       <workItem from="1674477730085" duration="6106000" />
       <workItem from="1674489919252" duration="698000" />
-      <workItem from="1674527486047" duration="27957000" />
+      <workItem from="1674527486047" duration="29096000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -360,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674564529350</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="chore: 删除多余的登陆检查代码">
+      <created>1674564920933</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1674564920933</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

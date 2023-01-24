@@ -23,7 +23,7 @@ public class ManageStock extends HttpServlet {
             return;
         }
 
-        if (Req.hasEmpty(stockForm.isbn, stockForm.title)) {
+        if (Req.hasEmpty(stockForm.isbn, stockForm.title, stockForm.cost, stockForm.stock, stockForm.for_sale)) {
             Res.Error(res, 422, 42201, "参数校验不通过");
             return;
         }
@@ -51,8 +51,8 @@ public class ManageStock extends HttpServlet {
             return;
         }
 
-        if (Req.hasEmpty(stockForm.isbn, stockForm.title)) {
-            Res.Error(res, 422, 42201, "isbn和title不能为空");
+        if (Req.hasEmpty(stockForm.isbn, stockForm.title, stockForm.cost, stockForm.stock, stockForm.for_sale)) {
+            Res.Error(res, 422, 42201, "参数校验不通过");
             return;
         }
 
@@ -70,7 +70,7 @@ public class ManageStock extends HttpServlet {
                 put("book_info", stock);
             }
         };
-        Res.Json(res, 20000, "更新图书成功", data);
+        Res.Json(res, 20000, "更新成功", data);
     }
 
     @Override
