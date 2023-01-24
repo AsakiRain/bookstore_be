@@ -55,4 +55,8 @@ public class Form {
         public String serial;
         public Integer status;
     }
+
+    public final static class FinishOrderForm {
+        public String serial;
+    }
 }

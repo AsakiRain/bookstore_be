@@ -20,11 +20,6 @@ public class ListOrder extends HttpServlet {
         Claim claim = new Claim();
         Token.parse(token, claim);
 
-        if (req.getParameter("page") == null) {
-            Res.Error(res, 422, 42201, "缺少参数");
-            return;
-        }
-
         int page;
         try {
             page = Integer.parseInt(req.getParameter("page"));
