@@ -22,17 +22,17 @@ public class Statistic {
 
     public Statistic(java.util.Date date) {
         if (!hasStatistic(date)) {
-            this.create(date);
+            this._create(date);
         }
-        this.get(date);
+        this._get(date);
     }
 
-    private boolean create(java.util.Date date) {
+    private boolean _create(java.util.Date date) {
         int affectedRows = DB.commit("insert into statistics (date) values (?)", date);
         return affectedRows == 1;
     }
 
-    private void set(Map<String, Object> data) {
+    private void _set(Map<String, Object> data) {
         this.date = (java.util.Date) data.get("date");
         this.deal_income = (int) data.get("deal_income");
         this.deal_count = (int) data.get("deal_count");
@@ -48,13 +48,9 @@ public class Statistic {
         this.updated_at = ((Date) data.get("updated_at")).getTime();
     }
 
-    public String get(java.util.Date date) {
+    private void _get(java.util.Date date) {
         Map<String, Object> map = DB.queryOne("select * from statistics where date = ?", date);
-        if (map.size() == 0) {
-            return "统计数据不存在";
-        }
-        this.set(map);
-        return null;
+        this._set(map);
     }
 
     public static boolean hasStatistic(java.util.Date date) {
@@ -95,8 +91,9 @@ public class Statistic {
     }
 
     public boolean updateGoodsCount() {
-        int affectedRows = DB.commit("update statistics set goods_count = (select count(*) from goods) where date = " +
-                "?", this.date);
+        int affectedRows =
+                DB.commit("update statistics set goods_count = (select count(*) from goods) where date = " + "?",
+                        this.date);
         return affectedRows == 1;
     }
 
@@ -112,8 +109,9 @@ public class Statistic {
     }
 
     public boolean updateUserCount() {
-        int affectedRows = DB.commit("update statistics set user_count = (select count(*) from users) where date = " +
-                "?", this.date);
+        int affectedRows =
+                DB.commit("update statistics set user_count = (select count(*) from users) where date = " + "?",
+                        this.date);
         return affectedRows == 1;
     }
 }
