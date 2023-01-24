@@ -3,9 +3,7 @@ package com.cxsj1.homework.w5.model;
 import com.cxsj1.homework.w5.database.DB;
 import com.cxsj1.homework.w5.model.Form.UpdateOrderForm;
 
-import java.util.Date;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class Order {
     public String serial;
@@ -32,6 +30,10 @@ public class Order {
             throw new RuntimeException("Insert failed");
         }
         this._get(serial);
+    }
+
+    public Order(Map<String, Object> data) {
+        this._set(data);
     }
 
     private void _set(Map<String, Object> data) {
@@ -69,5 +71,20 @@ public class Order {
         if (affectedRows != 1) {
             throw new RuntimeException("Update failed");
         }
+    }
+
+    public static int countList(String username) {
+        return DB.countBy("SELECT COUNT(*) FROM orders WHERE username = ?", username);
+    }
+
+    public static ArrayList<Order> list(int page, String username) {
+        ArrayList<HashMap<String, Object>> list = DB.queryAll("SELECT * FROM orders WHERE username = ? LIMIT ?, 20",
+                username, (page - 1) * 20);
+        ArrayList<Order> orders = new ArrayList<>();
+        for (HashMap<String, Object> item : list) {
+            Order order = new Order(item);
+            orders.add(order);
+        }
+        return orders;
     }
 }

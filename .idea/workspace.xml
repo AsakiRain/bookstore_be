@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="feat: 下单前信息获取和下单功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ShowOrder.java" afterDir="false" />
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="feat: 获取订单列表">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ListOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +202,7 @@
       <workItem from="1674477730085" duration="6106000" />
       <workItem from="1674489919252" duration="698000" />
       <workItem from="1674527486047" duration="31844000" />
-      <workItem from="1674568842978" duration="6237000" />
+      <workItem from="1674568842978" duration="6612000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -400,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674573813270</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="feat: 显示订单详情">
+      <created>1674575118145</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1674575118145</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,8 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: 更新stock类" />
-    <MESSAGE value="chore: 更新Claim类" />
     <MESSAGE value="chore: 转储数据库文件，删除无用脚本" />
     <MESSAGE value="chore: 添加Order和Statistic类型" />
     <MESSAGE value="feat: 添加Statistic类初始化和统计的方法; chore: 更改Stock内变量名" />
@@ -443,6 +448,8 @@
     <MESSAGE value="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介" />
     <MESSAGE value="feat: 完善Order类，添加两个订单相关的api" />
     <MESSAGE value="feat: 下单前信息获取和下单功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 下单前信息获取和下单功能" />
+    <MESSAGE value="feat: 显示订单详情" />
+    <MESSAGE value="feat: 获取订单列表" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 获取订单列表" />
   </component>
 </project>
