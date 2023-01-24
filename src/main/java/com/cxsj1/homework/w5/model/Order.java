@@ -1,19 +1,18 @@
 package com.cxsj1.homework.w5.model;
 
 import com.cxsj1.homework.w5.database.DB;
-import com.cxsj1.homework.w5.model.Form.PurchaseOrderForm;
 import com.cxsj1.homework.w5.model.Form.UpdateOrderForm;
 
-import java.util.HashMap;
+import java.util.Date;
 import java.util.Map;
 import java.util.UUID;
 
 public class Order {
     public String serial;
     public String username;
-    public String cost;
+    public Integer cost;
     public String isbn;
-    public Short status;
+    public Integer status;
     public Long created_at;
     public Long updated_at;
     public Long finished_at;
@@ -28,7 +27,7 @@ public class Order {
     public Order(User user, Stock stock) {
         String serial = String.valueOf(UUID.randomUUID());
         int affectedRows = DB.commit("insert into orders(serial, username, cost, isbn, status) values(?, ?, ?, ?, ?)"
-                , serial, user.username, stock.cost, stock.isbn, "0");
+                , serial, user.username, stock.cost, stock.isbn, 0);
         if (affectedRows != 1) {
             throw new RuntimeException("Insert failed");
         }
@@ -38,12 +37,12 @@ public class Order {
     private void _set(Map<String, Object> data) {
         this.serial = (String) data.get("serial");
         this.username = (String) data.get("username");
-        this.cost = (String) data.get("cost");
+        this.cost = (Integer) data.get("cost");
         this.isbn = (String) data.get("isbn");
-        this.status = (Short) data.get("status");
-        this.created_at = (Long) data.get("created_at");
-        this.updated_at = (Long) data.get("updated_at");
-        this.finished_at = (Long) data.get("finished_at");
+        this.status = (Integer) data.get("status");
+        this.created_at = ((Date) data.get("created_at")).getTime();
+        this.updated_at = ((Date) data.get("updated_at")).getTime();
+        this.finished_at = data.get("finished_at") == null ? null : ((Date) data.get("finished_at")).getTime();
     }
 
     private void _get(String serial) {
@@ -70,17 +69,5 @@ public class Order {
         if (affectedRows != 1) {
             throw new RuntimeException("Update failed");
         }
-    }
-
-    public static HashMap<String, Object> emulate(User user, Stock stock) {
-        HashMap<String, Object> orderInfo = new HashMap<>() {
-            {
-                put("user_info", user);
-                put("goods_info", stock);
-                put("remain_balance", user.balance - stock.cost);
-                put("can_purchase", user.balance >= stock.cost && stock.stock > 0);
-            }
-        };
-        return orderInfo;
     }
 }

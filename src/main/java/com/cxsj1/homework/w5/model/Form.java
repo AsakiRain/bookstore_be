@@ -53,6 +53,6 @@ public class Form {
 
     public final static class UpdateOrderForm {
         public String serial;
-        public Short status;
+        public Integer status;
     }
 }

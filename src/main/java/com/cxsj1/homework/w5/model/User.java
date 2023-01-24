@@ -71,4 +71,15 @@ public class User {
     public boolean checkPassword(String password) {
         return this.password.equals(password);
     }
+
+    public boolean subBalance(int amount) {
+        int affectedRows = DB.commit("update users set balance = balance - ? where username = ?", amount,
+                this.username);
+        if (affectedRows == 1) {
+            this.balance -= amount;
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

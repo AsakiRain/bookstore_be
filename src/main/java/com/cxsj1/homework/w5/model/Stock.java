@@ -36,8 +36,15 @@ public class Stock {
     }
 
     public Stock(StockForm stockForm) {
-        int affectedRows = DB.commit("insert into stocks(isbn, title, author, publisher, publish_at, page, binding, " +
-                "series, " + "translator, original_title, producer, id, url, rating, rating_people, intro, cover, " + "price, cost, stock, for_sale) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, " + "?, ?, ?, ?, ?)", stockForm.isbn, stockForm.title, stockForm.author, stockForm.publisher, stockForm.publish_at, stockForm.page, stockForm.binding, stockForm.series, stockForm.translator, stockForm.original_title, stockForm.producer, stockForm.id, stockForm.url, stockForm.rating, stockForm.rating_people, stockForm.intro, stockForm.cover, stockForm.price, stockForm.cost, stockForm.stock, stockForm.for_sale);
+        int affectedRows =
+                DB.commit("insert into stocks(isbn, title, author, publisher, publish_at, page, binding, " + "series,"
+                        + " " + "translator, original_title, producer, id, url, rating, rating_people, intro, cover, "
+                        + "price, cost, stock, for_sale) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, " +
+                        "?, ?, ?, ?, ?)", stockForm.isbn, stockForm.title, stockForm.author, stockForm.publisher,
+                        stockForm.publish_at, stockForm.page, stockForm.binding, stockForm.series,
+                        stockForm.translator, stockForm.original_title, stockForm.producer, stockForm.id,
+                        stockForm.url, stockForm.rating, stockForm.rating_people, stockForm.intro, stockForm.cover,
+                        stockForm.price, stockForm.cost, stockForm.stock, stockForm.for_sale);
         if (affectedRows == 1) {
             this._get(stockForm.isbn);
         } else {
@@ -45,9 +52,10 @@ public class Stock {
         }
     }
 
-    public Stock(HashMap<String,Object> data) {
+    public Stock(HashMap<String, Object> data) {
         this._set(data);
     }
+
     public void set(StockForm stockForm) {
         this.isbn = stockForm.isbn;
         this.title = stockForm.title;
@@ -111,11 +119,20 @@ public class Stock {
     }
 
     public void save() {
-        int affectedRows =
-                DB.commit("update stocks set title = ?, author = ?, publisher = ?, publish_at = ?, page = " + "?, " +
-                        "binding =" + " ?, series = ?, translator = ?, original_title = ?, producer = ?, id " + "=" + " ?," + " url " + "= " + "?, " + "rating = ?, rating_people = ?, intro = ?, cover = ?, price " + "= ?, " + "cost " + "= ?, " + "stock = ?," + " " + "for_sale = ? where isbn = ?", this.title, this.author, this.publisher, this.publish_at, this.page, this.binding, this.series, this.translator, this.original_title, this.producer, this.id, this.url, this.rating, this.rating_people, this.intro, this.cover, this.price, this.cost, this.stock, this.for_sale, this.isbn);
+        int affectedRows = DB.commit("update stocks set title = ?, author = ?, publisher = ?, publish_at = ?, page = "
+                + "?, " + "binding =" + " ?, series = ?, translator = ?, original_title = ?, producer = ?, id " + "=" + " ?," + " url " + "= " + "?, " + "rating = ?, rating_people = ?, intro = ?, cover = ?, price " + "= ?, " + "cost " + "= ?, " + "stock = ?," + " " + "for_sale = ? where isbn = ?", this.title, this.author, this.publisher, this.publish_at, this.page, this.binding, this.series, this.translator, this.original_title, this.producer, this.id, this.url, this.rating, this.rating_people, this.intro, this.cover, this.price, this.cost, this.stock, this.for_sale, this.isbn);
         if (affectedRows != 1) {
             throw new RuntimeException("更新库存失败");
+        }
+    }
+
+    public boolean subStock() {
+        int affectedRows = DB.commit("update stocks set stock = stock - 1 where isbn = ?", this.isbn);
+        if (affectedRows == 1) {
+            this.stock -= 1;
+            return true;
+        } else {
+            return false;
         }
     }
 }

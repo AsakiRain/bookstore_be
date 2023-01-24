@@ -9,13 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介">
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="feat: 完善Order类，添加两个订单相关的api">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/PurchaseOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Form.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +206,7 @@
       <workItem from="1674477730085" duration="6106000" />
       <workItem from="1674489919252" duration="698000" />
       <workItem from="1674527486047" duration="31844000" />
-      <workItem from="1674568842978" duration="1018000" />
+      <workItem from="1674568842978" duration="4950000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -389,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674566668542</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="feat: 完善Order类，添加两个订单相关的api">
+      <created>1674569911023</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1674569911023</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: 更新readme的api定义" />
     <MESSAGE value="feat: 创建账号时发放648积分" />
     <MESSAGE value="chore: 更新stock类" />
     <MESSAGE value="chore: 更新Claim类" />
@@ -432,6 +439,7 @@
     <MESSAGE value="chore: 修改hasEmpty函数使其支持null检测" />
     <MESSAGE value="fix: 修复高权限不能访问低权限api的问题" />
     <MESSAGE value="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: 修改readme完成情况，fix: 商品搜索现在可以搜索简介" />
+    <MESSAGE value="feat: 完善Order类，添加两个订单相关的api" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 完善Order类，添加两个订单相关的api" />
   </component>
 </project>

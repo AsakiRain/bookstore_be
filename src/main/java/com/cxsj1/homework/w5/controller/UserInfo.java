@@ -19,24 +19,9 @@ import java.util.HashMap;
 public class UserInfo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String err;
         String token = req.getHeader("Authorization");
-        if (token == null) {
-            Res.Error(res, 401, 40101, "未登录");
-            return;
-        }
-
         Claim claim = new Claim();
-        err = Token.parse(token, claim);
-        if (err != null) {
-            Res.Error(res, 401, 40102, err);
-            return;
-        }
-
-        if (!User.hasUser(claim.username)) {
-            Res.Json(res, 42205, "用户不存在");
-            return;
-        }
+        Token.parse(token, claim);
         User user = new User(claim.username);
 
         HashMap<String, Object> data = new HashMap<>() {
