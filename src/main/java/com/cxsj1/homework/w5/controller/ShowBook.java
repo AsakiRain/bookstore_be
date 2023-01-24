@@ -14,11 +14,14 @@ import java.util.HashMap;
 public class ShowBook extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String err;
-
         String isbn = req.getParameter("isbn");
         if (isbn == null) {
             Res.Error(res, 422, 42201, "缺少参数");
+            return;
+        }
+
+        if (!Stock.hasBook(isbn)) {
+            Res.Error(res, 404, 40401, "没有这本书");
             return;
         }
 
