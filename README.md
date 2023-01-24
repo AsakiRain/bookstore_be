@@ -47,8 +47,8 @@
 | PUT    | ~~/booklist?isbn={isbn}~~                   | ~~添加到书单~~  | ❌被废弃：用户购物车现在是前端缓存        |
 | DELETE | ~~/booklist?isbn={isbn}~~                   | ~~从书单中删除~~ | ❌被废弃：用户购物车现在是前端缓存        |
 | GET    | ~~/booklist/search?keyword={keyword}~~      | ~~搜索书籍~~   | ❌被废弃👇                   |
-| GET    | /goods/list?page={page}                     | 获取书籍列表     | 🤯待修改：浏览全部图书不需要登录        |
-| GET    | /goods/search?keyword={keyword}&page={page} | 搜索书籍       | 🤯待修改：下架的图书不能被搜出来        |
+| GET    | /goods/list?page={page}                     | 获取书籍列表     | ✅                        |
+| GET    | /goods/search?keyword={keyword}&page={page} | 搜索书籍       | ✅                        |
 | GET    | /order/list?page={page}                     | 获取订单列表     | 🤡未做                     |
 | POST   | /order/purchase?isbn={isbn}                 | 购买书籍       | 🤡未做                     |
 | GET    | /order/show?serial={serial}                 | 查看订单状态     | 🤡未做                     |

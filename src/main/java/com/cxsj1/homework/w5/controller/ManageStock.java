@@ -39,7 +39,7 @@ public class ManageStock extends HttpServlet {
             return;
         }
 
-        if (Req.hasEmpty(stockForm.isbn, stockForm.title, stockForm.cost, stockForm.stock, stockForm.for_sale)) {
+        if (Req.hasEmpty(stockForm.isbn, stockForm.title)) {
             Res.Error(res, 422, 42201, "参数校验不通过");
             return;
         }

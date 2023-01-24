@@ -12,24 +12,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 
-@WebServlet("/api/booklist/page")
+@WebServlet("/api/goods/list")
 public class ListGoods extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String err;
-        String token = req.getHeader("Authorization");
-        if (token == null) {
-            Res.Error(res, 401, 40101, "未登录");
-            return;
-        }
-
-        Claim claim = new Claim();
-        err = Token.parse(token, claim);
-        if (err != null) {
-            Res.Error(res, 401, 40102, err);
-            return;
-        }
-
         if (req.getParameter("page") == null) {
             Res.Error(res, 422, 42201, "缺少参数");
             return;
