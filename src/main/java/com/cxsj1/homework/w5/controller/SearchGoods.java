@@ -1,6 +1,7 @@
 package com.cxsj1.homework.w5.controller;
 
-import com.cxsj1.homework.w5.model.BookList;
+import com.cxsj1.homework.w5.model.Goods;
+import com.cxsj1.homework.w5.model.Stock;
 import com.cxsj1.homework.w5.model.Claim;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
@@ -10,10 +11,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
-@WebServlet("/api/booklist/page")
-public class BookListPage extends HttpServlet {
+@WebServlet("/api/goods/list")
+public class SearchGoods extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String err;
@@ -30,6 +32,12 @@ public class BookListPage extends HttpServlet {
             return;
         }
 
+        String keyword = req.getParameter("keyword");
+        if (keyword == null) {
+            Res.Error(res, 422, 42201, "缺少参数");
+            return;
+        }
+
         if (req.getParameter("page") == null) {
             Res.Error(res, 422, 42201, "缺少参数");
             return;
@@ -43,11 +51,10 @@ public class BookListPage extends HttpServlet {
             return;
         }
 
-        BookList bookList = new BookList(claim.username);
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("book_list", bookList.list(page));
-                put("book_count", bookList.count);
+                put("search_result", Goods.search(keyword, page));
+                put("search_count", Goods.countSearch(keyword));
             }
         };
 

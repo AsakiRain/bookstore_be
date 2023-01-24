@@ -1,8 +1,7 @@
 package com.cxsj1.homework.w5.controller;
 
-import com.cxsj1.homework.w5.model.Stock;
-import com.cxsj1.homework.w5.model.BookList;
 import com.cxsj1.homework.w5.model.Claim;
+import com.cxsj1.homework.w5.model.Goods;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,11 +10,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
-@WebServlet("/api/booklist/search")
-public class BookListSearch extends HttpServlet {
+@WebServlet("/api/booklist/page")
+public class ListGoods extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String err;
@@ -32,18 +30,23 @@ public class BookListSearch extends HttpServlet {
             return;
         }
 
-        String keyword = req.getParameter("keyword");
-        if (keyword == null) {
+        if (req.getParameter("page") == null) {
             Res.Error(res, 422, 42201, "缺少参数");
             return;
         }
 
-        BookList bookList = new BookList(claim.username);
-        ArrayList<Stock> search_result = bookList.search(keyword);
+        int page;
+        try {
+            page = Integer.parseInt(req.getParameter("page"));
+        } catch (NumberFormatException e) {
+            Res.Error(res, 422, 42202, e.getMessage());
+            return;
+        }
+
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("search_result", search_result);
-                put("search_count", search_result.size());
+                put("goods_list", Goods.list(page));
+                put("goods_count", Goods.countList());
             }
         };
 
