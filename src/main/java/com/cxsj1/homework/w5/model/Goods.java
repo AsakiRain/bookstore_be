@@ -20,12 +20,14 @@ public class Goods {
         }
         return goods;
     }
-    public static  int countSearch(String keyword) {
+
+    public static int countSearch(String keyword) {
         return DB.countBy("SELECT COUNT(*) FROM stocks WHERE for_sale = ? AND title LIKE ?", 1, "%" + keyword + "%");
     }
+
     public static ArrayList<Stock> search(String keyword, int page) {
-        ArrayList<HashMap<String, Object>> list = DB.queryAll("SELECT * FROM stocks WHERE for_sale = ? AND title LIKE "
-                + "? LIMIT ?, 20", 1, "%" + keyword + "%", (page - 1) * 20);
+        ArrayList<HashMap<String, Object>> list = DB.queryAll("SELECT * FROM stocks WHERE for_sale = ? AND (title " +
+                "LIKE ? OR intro LIKE ?) LIMIT ?, 20", 1, "%" + keyword + "%", "%" + keyword + "%", (page - 1) * 20);
         ArrayList<Stock> goods = new ArrayList<>();
         for (HashMap<String, Object> item : list) {
             Stock stock = new Stock(item);

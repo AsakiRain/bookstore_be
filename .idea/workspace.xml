@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 删除多余的登陆检查代码">
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="fix: 修复高权限不能访问低权限api的问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ManageStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ManageStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F2_Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/filter/F2_Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Req.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/utils/Req.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Goods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +201,7 @@
       <workItem from="1674453879712" duration="2093000" />
       <workItem from="1674477730085" duration="6106000" />
       <workItem from="1674489919252" duration="698000" />
-      <workItem from="1674527486047" duration="29096000" />
+      <workItem from="1674527486047" duration="29675000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -365,7 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674564920933</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="chore: 修改hasEmpty函数使其支持null检测">
+      <created>1674566114902</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1674566114902</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix: 修复高权限不能访问低权限api的问题">
+      <created>1674566179893</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1674566179893</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +419,8 @@
     <MESSAGE value="feat: 请求路径匹配工具，用于路由匹配" />
     <MESSAGE value="feat: Permission权限过滤器，兼具JWTToken合法性检测和用户存在检测功能" />
     <MESSAGE value="chore: 删除多余的登陆检查代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: 删除多余的登陆检查代码" />
+    <MESSAGE value="chore: 修改hasEmpty函数使其支持null检测" />
+    <MESSAGE value="fix: 修复高权限不能访问低权限api的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复高权限不能访问低权限api的问题" />
   </component>
 </project>
