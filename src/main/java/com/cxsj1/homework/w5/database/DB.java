@@ -5,10 +5,8 @@ import com.cxsj1.homework.w5.Config;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class DB {
-
 
     static {
         try {
@@ -41,6 +39,7 @@ public class DB {
                     ps.setObject(i + 1, params[i]);
                 }
             }
+            if (Config.DB.DEBUG) System.out.println(ps.toString());
             affectedRows = ps.executeUpdate();
         } catch (SQLException e) {
             affectedRows = 0;
@@ -63,6 +62,7 @@ public class DB {
                     ps.setObject(i + 1, params[i]);
                 }
             }
+            if (Config.DB.DEBUG) System.out.println(ps.toString());
             rs = ps.executeQuery();
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnCount = rsmd.getColumnCount();
@@ -93,6 +93,7 @@ public class DB {
                     ps.setObject(i + 1, params[i]);
                 }
             }
+            if (Config.DB.DEBUG) System.out.println(ps.toString());
             rs = ps.executeQuery();
             ResultSetMetaData rsmd = rs.getMetaData();
 
@@ -118,6 +119,7 @@ public class DB {
         int rowCount = 0;
         try {
             ps = conn.prepareStatement("select COUNT(*) as row_count from " + dbName);
+            if (Config.DB.DEBUG) System.out.println(ps.toString());
             rs = ps.executeQuery();
             rs.next();
             rowCount = rs.getInt(1);
@@ -141,6 +143,7 @@ public class DB {
                     ps.setObject(i + 1, params[i]);
                 }
             }
+            if (Config.DB.DEBUG) System.out.println(ps.toString());
             rs = ps.executeQuery();
             rs.next();
             rowCount = rs.getInt(1);
@@ -164,6 +167,7 @@ public class DB {
                     ps.setObject(i + 1, params[i]);
                 }
             }
+            if (Config.DB.DEBUG) System.out.println(ps.toString());
             rs = ps.executeQuery();
             hasRecord = rs.next();
         } catch (SQLException e) {

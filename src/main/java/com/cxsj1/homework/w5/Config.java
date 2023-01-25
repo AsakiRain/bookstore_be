@@ -13,6 +13,7 @@ public class Config {
                 "&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai";
         public static final String USER = "crud";
         public static final String PASS = "ssr129631";
+        public static final boolean DEBUG = true;
     }
 
     public static final class CORS_CONFIG {
