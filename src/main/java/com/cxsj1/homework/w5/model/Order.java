@@ -1,7 +1,7 @@
 package com.cxsj1.homework.w5.model;
 
 import com.cxsj1.homework.w5.database.DB;
-import com.cxsj1.homework.w5.model.Form.UpdateOrderForm;
+import com.cxsj1.homework.w5.model.Form.ProcessOrderForm;
 
 import java.util.*;
 
@@ -56,8 +56,8 @@ public class Order {
         return DB.hasRecord("select * from orders where serial = ?", serial);
     }
 
-    public void set(UpdateOrderForm updateOrderForm) {
-        this.status = updateOrderForm.status;
+    public void set(ProcessOrderForm processOrderForm) {
+        this.status = processOrderForm.status;
     }
 
     public void save() {
@@ -87,4 +87,20 @@ public class Order {
         }
         return orders;
     }
+
+    public static int manage_countList() {
+        return DB.countBy("SELECT COUNT(*) FROM orders");
+    }
+
+    public static ArrayList<Order> manage_list(int page) {
+        ArrayList<HashMap<String, Object>> list = DB.queryAll("SELECT * FROM orders LIMIT ?, 20", (page - 1) * 20);
+        ArrayList<Order> orders = new ArrayList<>();
+        for (HashMap<String, Object> item : list) {
+            Order order = new Order(item);
+            orders.add(order);
+        }
+        return orders;
+    }
+
+
 }

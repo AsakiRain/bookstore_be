@@ -51,7 +51,7 @@ public class Form {
         public String isbn;
     }
 
-    public final static class UpdateOrderForm {
+    public final static class ProcessOrderForm {
         public String serial;
         public Integer status;
     }

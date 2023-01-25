@@ -40,8 +40,13 @@ public class FinishOrder extends HttpServlet {
             return;
         }
 
-        if (order.status != 2) {
+        if (order.status < 2) {
             Res.Error(res, 422, 40302, "你还不能结束这个订单");
+            return;
+        }
+
+        if (order.status == 3) {
+            Res.Error(res, 422, 40303, "订单已经结束");
             return;
         }
 

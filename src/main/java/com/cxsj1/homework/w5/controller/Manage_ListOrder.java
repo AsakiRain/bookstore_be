@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 
-@WebServlet("/api/order/list")
-public class ListOrder extends HttpServlet {
+@WebServlet("/api/manage/order/list")
+public class Manage_ListOrder extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String token = req.getHeader("Authorization");
@@ -30,8 +30,8 @@ public class ListOrder extends HttpServlet {
 
         HashMap<String, Object> data = new HashMap<>() {
             {
-                put("order_list", Order.list(page, claim.username));
-                put("order_count", Order.countList(claim.username));
+                put("order_list", Order.manage_list(page));
+                put("order_count", Order.manage_countList());
             }
         };
 
