@@ -18,9 +18,6 @@ public class User {
     public Long updated_at;
 
     public User(String username) {
-        if (!hasUser(username)) {
-            throw new RuntimeException("用户不存在");
-        }
         this._get(username);
     }
 
@@ -57,29 +54,25 @@ public class User {
 
     private void _get(String username) {
         HashMap<String, Object> map = DB.queryOne("select * from users where username = ?", username);
+        if (map.size() == 0) throw new RuntimeException("!!用户不存在: " + username);
         this._set(map);
     }
 
     public void save() {
         int affectedRows =
                 DB.commit("update users set nickname = ?, sex = ?, password = ?, balance = ?, role = ? " + "where " + "username = ?", this.nickname, this.sex, this.password, this.balance, this.role, this.username);
-        if (affectedRows != 1) {
-            throw new RuntimeException("用户保存失败");
-        }
+        if (affectedRows != 1) throw new RuntimeException("!!更新用户信息失败: " + this.username);
+
     }
 
     public boolean checkPassword(String password) {
         return this.password.equals(password);
     }
 
-    public boolean subBalance(int amount) {
+    public void subBalance(int amount) {
         int affectedRows = DB.commit("update users set balance = balance - ? where username = ?", amount,
                 this.username);
-        if (affectedRows == 1) {
-            this.balance -= amount;
-            return true;
-        } else {
-            return false;
-        }
+        if (affectedRows != 1) throw new RuntimeException("!!余额扣除失败: " + this.username + " " + amount);
+        this.balance -= amount;
     }
 }

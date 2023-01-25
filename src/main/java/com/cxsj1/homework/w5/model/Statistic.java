@@ -34,9 +34,9 @@ public class Statistic {
         return new java.sql.Date(date.getTime());
     }
 
-    private boolean _create(java.util.Date date) {
+    private void _create(java.util.Date date) {
         int affectedRows = DB.commit("insert into statistics (date) values (?)", _date(date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!统计记录创建失败: " + _date(date));
     }
 
     private void _set(Map<String, Object> data) {
@@ -58,6 +58,7 @@ public class Statistic {
 
     private void _get(java.util.Date date) {
         Map<String, Object> map = DB.queryOne("select * from statistics where date = ?", _date(date));
+        if (map.size() == 0) throw new RuntimeException("!!统计记录不存在: " + _date(date));
         this._set(map);
     }
 
@@ -65,65 +66,64 @@ public class Statistic {
         return DB.hasRecord("select * from statistics where date = ?", _date(date));
     }
 
-    public boolean addDealIncome(int income) {
+    public void addDealIncome(int income) {
         int affectedRows = DB.commit("update statistics set deal_income = deal_income + ? where date = ?", income,
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean addDealCount() {
+    public void addDealCount() {
         int affectedRows = DB.commit("update statistics set deal_count = deal_count + 1 where date = ?",
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean addPurchaseCount() {
+    public void addPurchaseCount() {
         int affectedRows = DB.commit("update statistics set purchase_count = purchase_count + 1 where date = ?",
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean addPageView() {
+    public void addPageView() {
         int affectedRows = DB.commit("update statistics set page_view = page_view + 1 where date = ?",
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean addGoodsView() {
+    public void addGoodsView() {
         int affectedRows = DB.commit("update statistics set goods_view = goods_view + 1 where date = ?",
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean addNewGoodsCount() {
+    public void addNewGoodsCount() {
         int affectedRows = DB.commit("update statistics set new_goods_count = new_goods_count + 1 where date = ?",
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean updateGoodsCount() {
-        int affectedRows =
-                DB.commit("update statistics set goods_count = (select count(*) from stocks) where date = " + "?",
-                        _date(this.date));
-        return affectedRows == 1;
+    public void updateGoodsCount() {
+        int affectedRows = DB.commit("update statistics set goods_count = (select count(*) from stocks) where date = "
+                + "?", _date(this.date));
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean addTotalView() {
+    public void addTotalView() {
         int affectedRows = DB.commit("update statistics set total_view = total_view + 1 where date = ?",
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean addNewUserCount() {
+    public void addNewUserCount() {
         int affectedRows = DB.commit("update statistics set new_user_count = new_user_count + 1 where date = ?",
                 _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 
-    public boolean updateUserCount() {
+    public void updateUserCount() {
         int affectedRows =
                 DB.commit("update statistics set user_count = (select count(*) from users) where date = " + "?",
                         _date(this.date));
-        return affectedRows == 1;
+        if (affectedRows != 1) throw new RuntimeException("!!更新统计数据数失败: " + _date(this.date));
     }
 }

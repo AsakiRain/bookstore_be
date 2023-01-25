@@ -16,9 +16,6 @@ public class Order {
     public Long finished_at;
 
     public Order(String serial) {
-        if (!hasOrder(serial)) {
-            throw new RuntimeException("No such order");
-        }
         this._get(serial);
     }
 
@@ -49,6 +46,7 @@ public class Order {
 
     private void _get(String serial) {
         Map<String, Object> map = DB.queryOne("select * from orders where serial = ?", serial);
+        if (map.size() == 0) throw new RuntimeException("!!订单不存在: " + serial);
         this._set(map);
     }
 
@@ -68,9 +66,7 @@ public class Order {
         } else {
             affectedRows = DB.commit("update orders set status = ? where serial = ?", this.status, this.serial);
         }
-        if (affectedRows != 1) {
-            throw new RuntimeException("Update failed");
-        }
+        if (affectedRows != 1) throw new RuntimeException("!!更新订单失败: " + this.serial);
     }
 
     public static int countList(String username) {
@@ -101,6 +97,4 @@ public class Order {
         }
         return orders;
     }
-
-
 }

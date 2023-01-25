@@ -29,9 +29,6 @@ public class Stock {
     public boolean for_sale;
 
     public Stock(String isbn) {
-        if (!hasBook(isbn)) {
-            throw new RuntimeException("No such book");
-        }
         this._get(isbn);
     }
 
@@ -45,11 +42,8 @@ public class Stock {
                         stockForm.translator, stockForm.original_title, stockForm.producer, stockForm.id,
                         stockForm.url, stockForm.rating, stockForm.rating_people, stockForm.intro, stockForm.cover,
                         stockForm.price, stockForm.cost, stockForm.stock, stockForm.for_sale);
-        if (affectedRows == 1) {
-            this._get(stockForm.isbn);
-        } else {
-            throw new RuntimeException("Insert failed");
-        }
+        if (affectedRows != 1) throw new RuntimeException("!!创建库存失败:" + stockForm.isbn);
+        this._get(stockForm.isbn);
     }
 
     public Stock(HashMap<String, Object> data) {
@@ -106,6 +100,7 @@ public class Stock {
 
     private void _get(String isbn) {
         HashMap<String, Object> map = DB.queryOne("select * from stocks where isbn = ?", isbn);
+        if (map.size() == 0) throw new RuntimeException("!!库存记录不存在: " + isbn);
         this._set(map);
     }
 
@@ -121,18 +116,12 @@ public class Stock {
     public void save() {
         int affectedRows = DB.commit("update stocks set title = ?, author = ?, publisher = ?, publish_at = ?, page = "
                 + "?, " + "binding =" + " ?, series = ?, translator = ?, original_title = ?, producer = ?, id " + "=" + " ?," + " url " + "= " + "?, " + "rating = ?, rating_people = ?, intro = ?, cover = ?, price " + "= ?, " + "cost " + "= ?, " + "stock = ?," + " " + "for_sale = ? where isbn = ?", this.title, this.author, this.publisher, this.publish_at, this.page, this.binding, this.series, this.translator, this.original_title, this.producer, this.id, this.url, this.rating, this.rating_people, this.intro, this.cover, this.price, this.cost, this.stock, this.for_sale, this.isbn);
-        if (affectedRows != 1) {
-            throw new RuntimeException("更新库存失败");
-        }
+        if (affectedRows != 1) throw new RuntimeException("!!更新库存失败: " + this.isbn);
     }
 
-    public boolean subStock() {
+    public void subStock() {
         int affectedRows = DB.commit("update stocks set stock = stock - 1 where isbn = ?", this.isbn);
-        if (affectedRows == 1) {
-            this.stock -= 1;
-            return true;
-        } else {
-            return false;
-        }
+        this.stock -= 1;
+        if (affectedRows != 1) throw new RuntimeException("!!库存数量扣除失败: " + this.isbn);
     }
 }
