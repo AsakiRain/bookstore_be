@@ -1,5 +1,7 @@
 # bookstore5_be
 
+> 旧版本已经迁移到V4分支，如果你在找作业4，请前往[https://github.com/AsakiRain/bookstore_be/tree/v4](https://github.com/AsakiRain/bookstore_be/tree/v4)
+
 ## 介绍
 
 因为前后端分离，后端只用`servlet`没有`jsp`。使用了`fastjson`和`auth0-jwt`
@@ -60,9 +62,9 @@
 | DELETE | /manage/stock?isbn={isbn}                   | 删除书籍       | ✅                 |
 | PUT    | /manage/stock                               | 修改书籍信息     | ✅                 |
 | POST   | /manage/stock                               | 添加书籍       | ✅                 |
-| GET    | /manage/order/list?page={page}              | 店员获取订单列表   | 🤡未做              |
-| GET    | /manage/order/show?serial={serial}          | 店员获取订单状态   | 🤡未做              |
-| POST   | /manage/order/process?serial={serial}       | 店员审核和发货    | 🤡未做              |
+| GET    | /manage/order/list?page={page}              | 店员获取订单列表   | ✅                 |
+| GET    | /manage/order/show?serial={serial}          | 店员获取订单状态   | ✅                 |
+| POST   | /manage/order/process?serial={serial}       | 店员审核和发货    | ✅                 |
 | GET    | /admin/statistics                           | 店长获取统计信息   | 🤡未做              |
 
 ## 数据库配置
