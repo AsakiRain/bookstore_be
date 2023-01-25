@@ -22,10 +22,10 @@ public class Statistic {
 
     public Statistic(java.util.Date date) {
         if (!hasStatistic(date)) {
-            System.out.printf("::create new statistic for %s\n", date.toString());
+            System.out.printf("::create new statistic for %s\n", _date(date));
             this._create(date);
         } else {
-            System.out.printf("::get statistic for %s\n", date.toString());
+            System.out.printf("::get statistic for %s\n", _date(date));
         }
         this._get(date);
     }
@@ -35,12 +35,12 @@ public class Statistic {
     }
 
     private void _create(java.util.Date date) {
-        int affectedRows = DB.commit("insert into statistics (date) values (?)", _date(date));
+        int affectedRows = DB.commit("insert into statistics (date, user_count, goods_count) values (?, (select count" +
+                "(*) from users), (select count(*) from stocks))", _date(date));
         if (affectedRows != 1) throw new RuntimeException("!!统计记录创建失败: " + _date(date));
     }
 
     private void _set(Map<String, Object> data) {
-        System.out.printf("%s", data.toString());
         this.date = (java.util.Date) data.get("date");
         this.deal_income = (int) data.get("deal_income");
         this.deal_count = (int) data.get("deal_count");
