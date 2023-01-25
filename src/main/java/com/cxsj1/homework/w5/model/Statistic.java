@@ -22,17 +22,25 @@ public class Statistic {
 
     public Statistic(java.util.Date date) {
         if (!hasStatistic(date)) {
+            System.out.printf("::create new statistic for %s\n", date.toString());
             this._create(date);
+        } else {
+            System.out.printf("::get statistic for %s\n", date.toString());
         }
         this._get(date);
     }
 
+    private static java.sql.Date _date(java.util.Date date) {
+        return new java.sql.Date(date.getTime());
+    }
+
     private boolean _create(java.util.Date date) {
-        int affectedRows = DB.commit("insert into statistics (date) values (?)", date);
+        int affectedRows = DB.commit("insert into statistics (date) values (?)", _date(date));
         return affectedRows == 1;
     }
 
     private void _set(Map<String, Object> data) {
+        System.out.printf("%s", data.toString());
         this.date = (java.util.Date) data.get("date");
         this.deal_income = (int) data.get("deal_income");
         this.deal_count = (int) data.get("deal_count");
@@ -49,69 +57,73 @@ public class Statistic {
     }
 
     private void _get(java.util.Date date) {
-        Map<String, Object> map = DB.queryOne("select * from statistics where date = ?", date);
+        Map<String, Object> map = DB.queryOne("select * from statistics where date = ?", _date(date));
         this._set(map);
     }
 
     public static boolean hasStatistic(java.util.Date date) {
-        return DB.hasRecord("select * from statistics where date = ?", date);
+        return DB.hasRecord("select * from statistics where date = ?", _date(date));
     }
 
     public boolean addDealIncome(int income) {
         int affectedRows = DB.commit("update statistics set deal_income = deal_income + ? where date = ?", income,
-                this.date);
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean addDealCount() {
-        int affectedRows = DB.commit("update statistics set deal_count = deal_count + 1 where date = ?", this.date);
+        int affectedRows = DB.commit("update statistics set deal_count = deal_count + 1 where date = ?",
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean addPurchaseCount() {
         int affectedRows = DB.commit("update statistics set purchase_count = purchase_count + 1 where date = ?",
-                this.date);
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean addPageView() {
-        int affectedRows = DB.commit("update statistics set page_view = page_view + 1 where date = ?", this.date);
+        int affectedRows = DB.commit("update statistics set page_view = page_view + 1 where date = ?",
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean addGoodsView() {
-        int affectedRows = DB.commit("update statistics set goods_view = goods_view + 1 where date = ?", this.date);
+        int affectedRows = DB.commit("update statistics set goods_view = goods_view + 1 where date = ?",
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean addNewGoodsCount() {
         int affectedRows = DB.commit("update statistics set new_goods_count = new_goods_count + 1 where date = ?",
-                this.date);
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean updateGoodsCount() {
         int affectedRows =
-                DB.commit("update statistics set goods_count = (select count(*) from goods) where date = " + "?",
-                        this.date);
+                DB.commit("update statistics set goods_count = (select count(*) from stocks) where date = " + "?",
+                        _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean addTotalView() {
-        int affectedRows = DB.commit("update statistics set total_view = total_view + 1 where date = ?", this.date);
+        int affectedRows = DB.commit("update statistics set total_view = total_view + 1 where date = ?",
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean addNewUserCount() {
         int affectedRows = DB.commit("update statistics set new_user_count = new_user_count + 1 where date = ?",
-                this.date);
+                _date(this.date));
         return affectedRows == 1;
     }
 
     public boolean updateUserCount() {
         int affectedRows =
                 DB.commit("update statistics set user_count = (select count(*) from users) where date = " + "?",
-                        this.date);
+                        _date(this.date));
         return affectedRows == 1;
     }
 }
