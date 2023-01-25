@@ -4,6 +4,7 @@ import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Claim;
 import com.cxsj1.homework.w5.model.Form.FinishOrderForm;
 import com.cxsj1.homework.w5.model.Order;
+import com.cxsj1.homework.w5.model.Statistic;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
 import jakarta.servlet.annotation.WebServlet;
@@ -52,6 +53,12 @@ public class FinishOrder extends HttpServlet {
 
         order.status = 3;
         order.save();
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
+        statistic.addDealCount();
+        statistic.addDealIncome(order.cost);
+        
         HashMap<String, Object> data = new HashMap<>() {
             {
                 put("order_info", order);

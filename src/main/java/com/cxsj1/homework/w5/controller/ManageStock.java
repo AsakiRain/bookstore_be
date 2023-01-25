@@ -1,6 +1,7 @@
 package com.cxsj1.homework.w5.controller;
 
 import com.alibaba.fastjson2.JSON;
+import com.cxsj1.homework.w5.model.Statistic;
 import com.cxsj1.homework.w5.model.Stock;
 import com.cxsj1.homework.w5.model.Form.StockForm;
 import com.cxsj1.homework.w5.utils.Req;
@@ -34,6 +35,10 @@ public class ManageStock extends HttpServlet {
         }
 
         Stock stock = new Stock(stockForm);
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addNewGoodsCount();
+        statistic.updateGoodsCount();
 
         HashMap<String, Object> data = new HashMap<>() {
             {
@@ -85,6 +90,9 @@ public class ManageStock extends HttpServlet {
             Res.Json(res, 42205, "没有这本书");
             return;
         }
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.updateGoodsCount();
 
         Res.Json(res, 20000, "删除图书成功");
     }

@@ -1,5 +1,6 @@
 package com.cxsj1.homework.w5.controller;
 
+import com.cxsj1.homework.w5.model.Statistic;
 import com.cxsj1.homework.w5.model.Stock;
 import com.cxsj1.homework.w5.utils.Res;
 import jakarta.servlet.annotation.WebServlet;
@@ -26,6 +27,10 @@ public class ShowBook extends HttpServlet {
         }
 
         Stock stock = new Stock(isbn);
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
+        statistic.addGoodsView();
 
         HashMap<String, Object> data = new HashMap<>() {
             {

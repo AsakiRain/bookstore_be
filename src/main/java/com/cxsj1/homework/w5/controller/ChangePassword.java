@@ -3,6 +3,7 @@ package com.cxsj1.homework.w5.controller;
 import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Claim;
 import com.cxsj1.homework.w5.model.Form.PasswordForm;
+import com.cxsj1.homework.w5.model.Statistic;
 import com.cxsj1.homework.w5.model.User;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
@@ -37,6 +38,9 @@ public class ChangePassword extends HttpServlet {
 
         user.password = newPassword;
         user.save();
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
 
         Res.Json(res, 20000, "修改密码成功");
     }

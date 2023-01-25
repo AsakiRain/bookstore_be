@@ -2,6 +2,7 @@ package com.cxsj1.homework.w5.controller;
 
 import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Form.RegisterForm;
+import com.cxsj1.homework.w5.model.Statistic;
 import com.cxsj1.homework.w5.model.User;
 import com.cxsj1.homework.w5.utils.Req;
 import com.cxsj1.homework.w5.utils.Res;
@@ -46,6 +47,11 @@ public class Register extends HttpServlet {
             Res.Error(res, 500, 50000, "未能生成token");
             return;
         }
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
+        statistic.addNewUserCount();
+        statistic.updateUserCount();
 
         HashMap<String, Object> data = new HashMap<>() {
             {

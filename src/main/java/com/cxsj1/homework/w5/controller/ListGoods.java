@@ -2,6 +2,7 @@ package com.cxsj1.homework.w5.controller;
 
 import com.cxsj1.homework.w5.model.Claim;
 import com.cxsj1.homework.w5.model.Goods;
+import com.cxsj1.homework.w5.model.Statistic;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
 import jakarta.servlet.annotation.WebServlet;
@@ -28,6 +29,10 @@ public class ListGoods extends HttpServlet {
             Res.Error(res, 422, 42202, e.getMessage());
             return;
         }
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
+        statistic.addPageView();
 
         HashMap<String, Object> data = new HashMap<>() {
             {

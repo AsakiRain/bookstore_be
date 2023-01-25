@@ -3,6 +3,7 @@ package com.cxsj1.homework.w5.controller;
 import com.alibaba.fastjson2.JSON;
 import com.cxsj1.homework.w5.model.Claim;
 import com.cxsj1.homework.w5.model.Form.UserInfoForm;
+import com.cxsj1.homework.w5.model.Statistic;
 import com.cxsj1.homework.w5.model.User;
 import com.cxsj1.homework.w5.utils.Req;
 import com.cxsj1.homework.w5.utils.Res;
@@ -23,6 +24,9 @@ public class UserInfo extends HttpServlet {
         Claim claim = new Claim();
         Token.parse(token, claim);
         User user = new User(claim.username);
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
 
         HashMap<String, Object> data = new HashMap<>() {
             {
@@ -56,6 +60,9 @@ public class UserInfo extends HttpServlet {
         user.nickname = nickname;
         user.sex = sex;
         user.save();
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
 
         Res.Json(res, 20000, "更新信息成功");
     }

@@ -1,9 +1,6 @@
 package com.cxsj1.homework.w5.controller;
 
-import com.cxsj1.homework.w5.model.Claim;
-import com.cxsj1.homework.w5.model.Order;
-import com.cxsj1.homework.w5.model.Stock;
-import com.cxsj1.homework.w5.model.User;
+import com.cxsj1.homework.w5.model.*;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
 import jakarta.servlet.annotation.WebServlet;
@@ -46,6 +43,9 @@ public class ShowOrder extends HttpServlet {
         } else {
             stock = null;
         }
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
 
         HashMap<String, Object> data = new HashMap<>() {
             {

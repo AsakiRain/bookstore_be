@@ -1,11 +1,8 @@
 package com.cxsj1.homework.w5.controller;
 
 import com.alibaba.fastjson2.JSON;
+import com.cxsj1.homework.w5.model.*;
 import com.cxsj1.homework.w5.model.Form.PurchaseOrderForm;
-import com.cxsj1.homework.w5.model.Claim;
-import com.cxsj1.homework.w5.model.User;
-import com.cxsj1.homework.w5.model.Order;
-import com.cxsj1.homework.w5.model.Stock;
 import com.cxsj1.homework.w5.utils.Res;
 import com.cxsj1.homework.w5.utils.Token;
 import jakarta.servlet.annotation.WebServlet;
@@ -36,6 +33,9 @@ public class PurchaseOrder extends HttpServlet {
             return;
         }
         Stock stock = new Stock(isbn);
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
 
         HashMap<String, Object> data = new HashMap<>() {
             {
@@ -83,6 +83,10 @@ public class PurchaseOrder extends HttpServlet {
         Order order = new Order(user, stock);
         user.subBalance(stock.cost);
         stock.subStock();
+
+        Statistic statistic = new Statistic(new java.util.Date());
+        statistic.addTotalView();
+        statistic.addPurchaseCount();
 
         HashMap<String, Object> data = new HashMap<>() {
             {
