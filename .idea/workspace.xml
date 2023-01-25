@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="chore: 莫名奇妙的mysql错误现在会直接抛出，防止闷声不响地出错; 更新记录存在性检测方式，减少mysql查询次数">
+    <list default="true" id="393df623-8b24-4af1-a3b3-4f065130ac0c" name="变更" comment="fix: 创建本日记录时会自动填入user_count和goods_count，防止无更新操作导致数据为0">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/controller/ShowStatistic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Statistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cxsj1/homework/w5/model/Statistic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +201,7 @@
       <workItem from="1674489919252" duration="698000" />
       <workItem from="1674527486047" duration="31844000" />
       <workItem from="1674568842978" duration="7624000" />
-      <workItem from="1674621103019" duration="9855000" />
+      <workItem from="1674621103019" duration="10015000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 把所有的form放在Form类里">
       <created>1674294923376</created>
@@ -464,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674640730749</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix: 创建本日记录时会自动填入user_count和goods_count，防止无更新操作导致数据为0">
+      <created>1674641104991</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1674641104991</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: 重写搜索功能，修改获取列表功能" />
     <MESSAGE value="fix: 修正数据类型; chore: 转储数据库" />
     <MESSAGE value="chore: 完善搜索和列表功能" />
     <MESSAGE value="fix: 搜索不存在的图书时提前报错" />
@@ -507,6 +511,7 @@
     <MESSAGE value="fix: 修正了java.sql.Date和java.util.Date日期互转的问题" />
     <MESSAGE value="feat: 插入了统计功能" />
     <MESSAGE value="chore: 莫名奇妙的mysql错误现在会直接抛出，防止闷声不响地出错; 更新记录存在性检测方式，减少mysql查询次数" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: 莫名奇妙的mysql错误现在会直接抛出，防止闷声不响地出错; 更新记录存在性检测方式，减少mysql查询次数" />
+    <MESSAGE value="fix: 创建本日记录时会自动填入user_count和goods_count，防止无更新操作导致数据为0" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 创建本日记录时会自动填入user_count和goods_count，防止无更新操作导致数据为0" />
   </component>
 </project>
